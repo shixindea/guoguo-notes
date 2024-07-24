@@ -5,6 +5,8 @@ import * as clientConfig3 from 'H:/Desktop/guoguo-notes/node_modules/.pnpm/@vuep
 import * as clientConfig4 from 'H:/Desktop/guoguo-notes/node_modules/.pnpm/@vuepress+plugin-nprogress@2.0.0-rc.37_vuepress@2.0.0-rc.14/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
 import * as clientConfig5 from 'H:/Desktop/guoguo-notes/node_modules/.pnpm/@vuepress+plugin-theme-data@2.0.0-rc.37_vuepress@2.0.0-rc.14/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
 import * as clientConfig6 from 'H:/Desktop/guoguo-notes/node_modules/.pnpm/@vuepress+theme-default@2.0.0-rc.37_vuepress@2.0.0-rc.14/node_modules/@vuepress/theme-default/lib/client/config.js'
+import * as clientConfig7 from 'H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/sass-palette/load-hope.js'
+import * as clientConfig8 from 'H:/Desktop/guoguo-notes/node_modules/.pnpm/vuepress-plugin-search-pro@2.0.0-rc.52_vuepress@2.0.0-rc.14/node_modules/vuepress-plugin-search-pro/lib/client/config.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -14,4 +16,6 @@ export const clientConfigs = [
   clientConfig4,
   clientConfig5,
   clientConfig6,
+  clientConfig7,
+  clientConfig8,
 ].map((m) => m.default).filter(Boolean)
