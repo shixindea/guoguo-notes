@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/Java/Mybatis 语法.html.vue"
+const data = JSON.parse("{\"path\":\"/Java/Mybatis%20%E8%AF%AD%E6%B3%95.html\",\"title\":\"Mybatis 语法\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Mybatis 语法\",\"date\":\"2023-5-21\",\"tags\":[\"Java\",\"Mybatis\",\"语法\"],\"categories\":[\"自学篇\"]},\"headers\":[{\"level\":2,\"title\":\"模糊查询\",\"slug\":\"模糊查询\",\"link\":\"#模糊查询\",\"children\":[]},{\"level\":2,\"title\":\"控制台打印sql\",\"slug\":\"控制台打印sql\",\"link\":\"#控制台打印sql\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"Java/Mybatis 语法.md\"}")
+export { comp, data }

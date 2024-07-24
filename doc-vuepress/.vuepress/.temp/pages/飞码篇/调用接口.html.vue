@@ -1,0 +1,76 @@
+<template><div><h2 id="调用接口" tabindex="-1"><a class="header-anchor" href="#调用接口"><span>调用接口</span></a></h2>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line"><span class="token doc-comment comment">/** 全宗机构关联列表的分页  yxd **/</span></span>
+<span class="line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getFondsInnerPageData</span><span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
+<span class="line">  <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span>
+<span class="line">    <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/fonds/selectUserListByDeptld/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token literal-property property">params</span><span class="token operator">:</span> data</span>
+<span class="line">  <span class="token punctuation">}</span><span class="token punctuation">)</span></span>
+<span class="line"><span class="token punctuation">}</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_1-调用接口的方法" tabindex="-1"><a class="header-anchor" href="#_1-调用接口的方法"><span>1.调用接口的方法</span></a></h2>
+<blockquote>
+<p>请求数据逻辑</p>
+<p>我们每次点击都会向后台请求数据，然后后台返回的数据来覆盖我们本有的数据，从而达到页面为最新数据的效果。</p>
+<p>如果在刚开始时，请求所有数据，再利用前端来进行筛选的话，可能会出现 <code v-pre>空缺</code> 或者 <code v-pre>换页</code> 有问题的状况</p>
+</blockquote>
+<p>定义接口</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line"><span class="token comment">// 我的订单</span></span>
+<span class="line"><span class="token function">GetScenicOrderList</span><span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> req<span class="token punctuation">.</span><span class="token constant">POST</span><span class="token punctuation">(</span><span class="token string">'Scenic/GetScenicOrderList'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>页面中进行引用这个接口</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line"><span class="token keyword">import</span> <span class="token punctuation">{</span>GetScenicOrderList<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@/api/scenic.js"</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>methods 中定义方法请求这个接口，并将这个接口放到自己的变量中</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line"><span class="token function">orderList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
+<span class="line">    <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></span>
+<span class="line">    <span class="token function">GetScenicOrderList</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span>
+<span class="line">        <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span></span>
+<span class="line">            <span class="token literal-property property">Status</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span></span>
+<span class="line">        <span class="token punctuation">}</span></span>
+<span class="line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span>
+<span class="line">        <span class="token keyword">this</span><span class="token punctuation">.</span>OrderList <span class="token operator">=</span> res<span class="token punctuation">.</span>OrderList<span class="token punctuation">;</span></span>
+<span class="line">        <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>resultcode <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
+<span class="line">            <span class="token keyword">this</span><span class="token punctuation">.</span>OrderList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span></span>
+<span class="line">        <span class="token punctuation">}</span></span>
+<span class="line">        <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></span>
+<span class="line">    <span class="token punctuation">}</span><span class="token punctuation">)</span></span>
+<span class="line"><span class="token punctuation">}</span><span class="token punctuation">,</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在 onShow 中调用一下</p>
+<pre><code>	onShow(){
+		this.page = 1;// 为防止有翻页的页面，这个值为翻页定位值
+		this.orderList();
+	},
+</code></pre>
+<h2 id="_2-跳转页面时传值" tabindex="-1"><a class="header-anchor" href="#_2-跳转页面时传值"><span>2. 跳转页面时传值</span></a></h2>
+<blockquote>
+<p>父页面在调用的时候，将页面中通过点击事件来调用页面</p>
+</blockquote>
+<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>goods align-center<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>goDetail(item)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>在调用页面的时候，将这个数据保存到<code v-pre>全局变量</code>中，然后进行页面的跳转</p>
+<p><strong>注意</strong>  本次调用数据因为涉及到筛选， 所以直接传的值为 <code v-pre>item</code> 这个经过筛选后得到的item值，</p>
+</blockquote>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line">		<span class="token function">goDetail</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
+<span class="line">			app<span class="token punctuation">.</span>globalData<span class="token punctuation">.</span>optionsItem <span class="token operator">=</span> item<span class="token punctuation">;</span></span>
+<span class="line">			uni<span class="token punctuation">.</span><span class="token function">navigateTo</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span>
+<span class="line">				<span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">'/pages/order/detail?ORDERID='</span> <span class="token operator">+</span> item<span class="token punctuation">.</span><span class="token constant">ID</span></span>
+<span class="line">			<span class="token punctuation">}</span><span class="token punctuation">)</span></span>
+<span class="line">		<span class="token punctuation">}</span><span class="token punctuation">,</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>子组件中 ，页面已经完成了跳转，现在子组件需要接收数据</p>
+<p>通过在<code v-pre> onload</code> 中进行接收数据 ，并且保存到子组件定义的变量<code v-pre>orderItem</code>中，</p>
+<p>Now , we can 对这个变量进行数据渲染了</p>
+</blockquote>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line">	<span class="token function">onLoad</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
+<span class="line">		<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token constant">ORDERID</span> <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token constant">ORDERID</span><span class="token punctuation">;</span></span>
+<span class="line">		<span class="token keyword">this</span><span class="token punctuation">.</span>orderItem <span class="token operator">=</span> app<span class="token punctuation">.</span>globalData<span class="token punctuation">.</span>optionsItem<span class="token punctuation">;</span></span>
+<span class="line">		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"ddddddd"</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>orderItem<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line">	<span class="token punctuation">}</span><span class="token punctuation">,</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

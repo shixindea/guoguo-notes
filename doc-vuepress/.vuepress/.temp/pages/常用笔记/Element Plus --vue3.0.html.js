@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/常用笔记/Element Plus --vue3.0.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/Element%20Plus%20--vue3.0.html\",\"title\":\"Element Plus --vue3.0\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Element Plus --vue3.0\",\"date\":\"2022-12-29T00:00:00.000Z\",\"tags\":[\"vue3.0\",\"Element Plus\"],\"categories\":[\"居家篇\"]},\"headers\":[{\"level\":2,\"title\":\"1.解决图标不显示的问题\",\"slug\":\"_1-解决图标不显示的问题\",\"link\":\"#_1-解决图标不显示的问题\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"常用笔记/Element Plus --vue3.0.md\"}")
+export { comp, data }

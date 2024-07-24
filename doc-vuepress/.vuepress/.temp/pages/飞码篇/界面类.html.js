@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/飞码篇/界面类.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%A3%9E%E7%A0%81%E7%AF%87/%E7%95%8C%E9%9D%A2%E7%B1%BB.html\",\"title\":\"快速界面\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"快速界面\",\"date\":\"2022-08-04T00:00:00.000Z\",\"tags\":[\"界面\"],\"categories\":[\"飞码篇\"]},\"headers\":[{\"level\":2,\"title\":\"修改头像和昵称\",\"slug\":\"修改头像和昵称\",\"link\":\"#修改头像和昵称\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"飞码篇/界面类.md\"}")
+export { comp, data }

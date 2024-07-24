@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/常用笔记/Echarts.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/Echarts.html\",\"title\":\"ecahrts 笔记\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"ecahrts 笔记\",\"date\":\"2023-9-23\",\"tags\":[\"ecahrts\",\"笔记\"],\"categories\":[\"居家篇\"]},\"headers\":[{\"level\":2,\"title\":\"柱状体 文字太长 导值底部文字不显示  省略号做法\",\"slug\":\"柱状体-文字太长-导值底部文字不显示-省略号做法\",\"link\":\"#柱状体-文字太长-导值底部文字不显示-省略号做法\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"常用笔记/Echarts.md\"}")
+export { comp, data }

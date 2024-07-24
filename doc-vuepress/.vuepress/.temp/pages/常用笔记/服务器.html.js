@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/常用笔记/服务器.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/%E6%9C%8D%E5%8A%A1%E5%99%A8.html\",\"title\":\"服务器\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"服务器\",\"date\":\"2022-12-29T00:00:00.000Z\",\"tags\":[\"服务器\"],\"categories\":[\"自学篇\"]},\"headers\":[{\"level\":2,\"title\":\"nginx 启动和关闭\",\"slug\":\"nginx-启动和关闭\",\"link\":\"#nginx-启动和关闭\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"常用笔记/服务器.md\"}")
+export { comp, data }

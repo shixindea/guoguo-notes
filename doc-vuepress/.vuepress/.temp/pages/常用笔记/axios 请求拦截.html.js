@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/常用笔记/axios 请求拦截.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/axios%20%E8%AF%B7%E6%B1%82%E6%8B%A6%E6%88%AA.html\",\"title\":\"axios 请求拦截器\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"axios 请求拦截器\",\"date\":\"2022-12-29T00:00:00.000Z\",\"tags\":[\"vue\",\"axios\"],\"categories\":[\"居家篇\"]},\"headers\":[{\"level\":2,\"title\":\"request.js\",\"slug\":\"request-js\",\"link\":\"#request-js\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"常用笔记/axios 请求拦截.md\"}")
+export { comp, data }

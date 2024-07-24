@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/常用笔记/ecahrts 使用地图报错问题.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/ecahrts%20%E4%BD%BF%E7%94%A8%E5%9C%B0%E5%9B%BE%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98.html\",\"title\":\"ecahrts 使用地图报错问题\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"ecahrts 使用地图报错问题\",\"date\":\"2023-9-23\",\"tags\":[\"ecahrts\",\"报错\"],\"categories\":[\"居家篇\"]},\"headers\":[{\"level\":2,\"title\":\"echarts版本升级导致Chinamap渲染报错问题（vue2）\",\"slug\":\"echarts版本升级导致chinamap渲染报错问题-vue2\",\"link\":\"#echarts版本升级导致chinamap渲染报错问题-vue2\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"常用笔记/ecahrts 使用地图报错问题.md\"}")
+export { comp, data }

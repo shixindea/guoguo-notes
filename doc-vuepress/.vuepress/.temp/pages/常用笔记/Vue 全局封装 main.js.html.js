@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/常用笔记/Vue 全局封装 main.js.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/Vue%20%E5%85%A8%E5%B1%80%E5%B0%81%E8%A3%85%20main.js.html\",\"title\":\"vue 全局封装\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"vue 全局封装\",\"date\":\"2024-5-21\",\"tags\":[\"vue\",\"笔记\",\"全局封装\",\"全局\",\"封装\"],\"categories\":[\"自学篇\"]},\"headers\":[{\"level\":2,\"title\":\"防止多次点击，做节流处理\",\"slug\":\"防止多次点击-做节流处理\",\"link\":\"#防止多次点击-做节流处理\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"常用笔记/Vue 全局封装 main.js.md\"}")
+export { comp, data }

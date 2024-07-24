@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/飞码篇/Js获取当前时间的方法.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%A3%9E%E7%A0%81%E7%AF%87/Js%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4%E7%9A%84%E6%96%B9%E6%B3%95.html\",\"title\":\"Js获取当前时间的方法\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Js获取当前时间的方法\",\"date\":\"2022-08-04T00:00:00.000Z\",\"tags\":[\"Javascript\",\"时间\"],\"categories\":[\"飞码篇\"]},\"headers\":[{\"level\":3,\"title\":\"方法一\",\"slug\":\"方法一\",\"link\":\"#方法一\",\"children\":[]},{\"level\":3,\"title\":\"方法二   通过时间戳的方法\",\"slug\":\"方法二-通过时间戳的方法\",\"link\":\"#方法二-通过时间戳的方法\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"飞码篇/Js获取当前时间的方法.md\"}")
+export { comp, data }

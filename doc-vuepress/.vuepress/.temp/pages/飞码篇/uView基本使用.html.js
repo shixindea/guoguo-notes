@@ -1,0 +1,3 @@
+import comp from "H:/Desktop/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/飞码篇/uView基本使用.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%A3%9E%E7%A0%81%E7%AF%87/uView%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html\",\"title\":\"uView 代码片段\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"uView 代码片段\",\"date\":\"2022-08-04T00:00:00.000Z\",\"tags\":[\"uniapp\",\"uView\",\"代码片段\"],\"categories\":[\"飞码篇\"]},\"headers\":[{\"level\":2,\"title\":\"Toast消息提示\",\"slug\":\"toast消息提示\",\"link\":\"#toast消息提示\",\"children\":[]},{\"level\":2,\"title\":\"页面加载\",\"slug\":\"页面加载\",\"link\":\"#页面加载\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"飞码篇/uView基本使用.md\"}")
+export { comp, data }
