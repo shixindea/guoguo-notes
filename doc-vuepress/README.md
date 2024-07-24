@@ -47,7 +47,7 @@
 - [Git 提交规范 Guoguo-cz](https://www.npmjs.com/package/@shixinde/guoguo-cz)
 - [JavaScript 工具类 Guoguo-utils](https://shixindea.github.io/shixinde-utils/)
 - [vuepress 快速模板 Guoguo-vuepress](https://www.npmjs.com/package/@shixinde/vuepress-theme-init)
-- [个人笔记 guoguo-notes](https://www.npmjs.com/package/@shixinde/vuepress-theme-init)
+- [个人笔记 guoguo-notes](https://shixindea.github.io/guoguo-notes/)
 
 ### 作者
 

@@ -39,7 +39,7 @@
 <li><a href="https://www.npmjs.com/package/@shixinde/guoguo-cz" target="_blank" rel="noopener noreferrer">Git 提交规范 Guoguo-cz</a></li>
 <li><a href="https://shixindea.github.io/shixinde-utils/" target="_blank" rel="noopener noreferrer">JavaScript 工具类 Guoguo-utils</a></li>
 <li><a href="https://www.npmjs.com/package/@shixinde/vuepress-theme-init" target="_blank" rel="noopener noreferrer">vuepress 快速模板 Guoguo-vuepress</a></li>
-<li><a href="https://www.npmjs.com/package/@shixinde/vuepress-theme-init" target="_blank" rel="noopener noreferrer">个人笔记 guoguo-notes</a></li>
+<li><a href="https://shixindea.github.io/guoguo-notes/" target="_blank" rel="noopener noreferrer">个人笔记 guoguo-notes</a></li>
 </ul>
 <h3 id="作者" tabindex="-1"><a class="header-anchor" href="#作者"><span>作者</span></a></h3>
 <p>袁果锅@shixinde

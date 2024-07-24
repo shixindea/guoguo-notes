@@ -1,31 +1,15 @@
-# @shixinde/vuepress-theme-init
-
-npm 地址 [https://www.npmjs.com/package/@shixinde/vuepress-theme-init]
-
-安装  npm i @shixinde/vuepress-theme-init
-
-开发 袁果锅
-
-npm组织  @shixinde
+# 个人笔记 Guoguo notes
 
 
-## 快速开始
+### 其他开源项目
 
-### 安装包 `npm i @shixinde/vuepress-theme-init`
+- [Vue3 组件库 Guoguo-ui](https://shixindea.github.io/#/)
+- [Git 提交规范 Guoguo-cz](https://www.npmjs.com/package/@shixinde/guoguo-cz)
+- [JavaScript 工具类 Guoguo-utils](https://shixindea.github.io/shixinde-utils/)
+- [vuepress 快速模板 Guoguo-vuepress](https://www.npmjs.com/package/@shixinde/vuepress-theme-init)
+- [个人笔记 guoguo-notes](https://www.npmjs.com/package/@shixinde/vuepress-theme-init)
 
-```
-npm i @shixinde/vuepress-theme-init
-```
+### 作者
 
-### 找到`node_modules`中的`@shixinde` 将文件夹中的 `vuepress-theme-init`文件夹提取出来
-
-### 执行命令安装依赖
-
-```
-npm i 或者 pnpm i
-```
-
-### 运行
-```
-npm run docs:dev 或者 pnpm docs:dev
-```
+袁果锅@shixinde
+邮箱：2914310412@qq.com
