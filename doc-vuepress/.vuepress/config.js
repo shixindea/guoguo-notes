@@ -9,6 +9,7 @@ export default defineUserConfig({
     "description": "袁果锅笔记",
     port: '6688', //端口号
     "dest": "docs",
+    base: "/guoguo-notes/",
     head: [
         [
             "link",
