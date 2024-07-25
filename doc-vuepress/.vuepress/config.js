@@ -4,6 +4,7 @@ import { defineUserConfig } from 'vuepress'
 import { zhNavbar, enNavbar, } from './navbar/switch.js'
 import { zhSidebar, enSidebar, } from './sidebar/switch.js'
 import { searchProPlugin } from "vuepress-plugin-search-pro";
+
 export default defineUserConfig({
     "title": "Guoguo-notes",
     "description": "袁果锅笔记",
@@ -45,7 +46,7 @@ export default defineUserConfig({
                 sidebar: zhSidebar,
                 sidebarDepth: 2,
                 notFound: ['没找到', '网页走丢了'],
-                backToHome: '返回首页'
+                backToHome: '返回首页',
 
             },
             '/en/': {
@@ -54,7 +55,7 @@ export default defineUserConfig({
                 selectLanguageText: 'Language',
                 navbar: enNavbar,
                 sidebar: zhSidebar,
-                
+
 
             }
         }
@@ -65,5 +66,6 @@ export default defineUserConfig({
             indexContent: true,
             hotReload: true,
         }),
+
     ],
 })

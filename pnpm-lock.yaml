@@ -17,6 +17,9 @@ devDependencies:
   vuepress:
     specifier: 2.0.0-rc.14
     version: 2.0.0-rc.14(@vuepress/bundler-vite@2.0.0-rc.14)(vue@3.4.31)
+  vuepress-plugin-right-anchor:
+    specifier: 2.1.0-rc.2
+    version: 2.1.0-rc.2
   vuepress-plugin-search-pro:
     specifier: 2.0.0-rc.52
     version: 2.0.0-rc.52(vuepress@2.0.0-rc.14)
@@ -2189,6 +2192,10 @@ packages:
       '@vue/runtime-dom': 3.4.33
       '@vue/server-renderer': 3.4.33(vue@3.4.33)
       '@vue/shared': 3.4.33
+    dev: true
+
+  /vuepress-plugin-right-anchor@2.1.0-rc.2:
+    resolution: {integrity: sha512-gQig9lm+/i0S/k3XyS/S/18huO9MDosrNeEQyZ5CJXPQ7DbbNKba6mADd2OOW1WLIDNmd0lzIiye0sPx2Hu+LQ==}
     dev: true
 
   /vuepress-plugin-search-pro@2.0.0-rc.52(vuepress@2.0.0-rc.14):

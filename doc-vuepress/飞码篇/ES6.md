@@ -1,6 +1,5 @@
 ---
 title: ES6笔记
-
 date: 2022-08-04
 tags:
  - ES6
