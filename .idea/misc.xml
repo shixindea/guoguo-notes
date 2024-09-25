@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="F:\maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="17" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1" />
+    <panes />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  }
+}</component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="242" key="FileChooserDialogImpl" timestamp="1691997196434">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="242" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-138.1280.680" timestamp="1691997196434" />
+    <state x="461" y="127" key="SettingsEditor" timestamp="1691997224614">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="127" key="SettingsEditor/0.0.1920.1040/-1920.-138.1280.680" timestamp="1691997224614" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

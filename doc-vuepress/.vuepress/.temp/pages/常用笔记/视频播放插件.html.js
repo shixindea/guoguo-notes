@@ -1,0 +1,16 @@
+import comp from "F:/my-project/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/常用笔记/视频播放插件.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E6%8F%92%E4%BB%B6.html\",\"title\":\"视频播放插件\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"视频播放插件\",\"date\":\"2022-12-29T00:00:00.000Z\",\"tags\":[\"视频播放\",\"笔记\"],\"categories\":[\"自学篇\"]},\"headers\":[{\"level\":2,\"title\":\"1.2 安装和快速使用\",\"slug\":\"_1-2-安装和快速使用\",\"link\":\"#_1-2-安装和快速使用\",\"children\":[{\"level\":3,\"title\":\"第一步：安装\",\"slug\":\"第一步-安装\",\"link\":\"#第一步-安装\",\"children\":[]},{\"level\":3,\"title\":\"第二步：main.js引入\",\"slug\":\"第二步-main-js引入\",\"link\":\"#第二步-main-js引入\",\"children\":[]},{\"level\":3,\"title\":\"第三步：在组件中写入\",\"slug\":\"第三步-在组件中写入\",\"link\":\"#第三步-在组件中写入\",\"children\":[]},{\"level\":3,\"title\":\"第四步：本地路径问题\",\"slug\":\"第四步-本地路径问题\",\"link\":\"#第四步-本地路径问题\",\"children\":[]}]},{\"level\":2,\"title\":\"2.1 分辨率切换\",\"slug\":\"_2-1-分辨率切换\",\"link\":\"#_2-1-分辨率切换\",\"children\":[]},{\"level\":2,\"title\":\"2.2 不通浏览器播放不同文件\",\"slug\":\"_2-2-不通浏览器播放不同文件\",\"link\":\"#_2-2-不通浏览器播放不同文件\",\"children\":[]},{\"level\":2,\"title\":\"2.3 底部控制栏\",\"slug\":\"_2-3-底部控制栏\",\"link\":\"#_2-3-底部控制栏\",\"children\":[]},{\"level\":2,\"title\":\"2.4 自动播放\",\"slug\":\"_2-4-自动播放\",\"link\":\"#_2-4-自动播放\",\"children\":[]},{\"level\":2,\"title\":\"2.5 视频播放控制\",\"slug\":\"_2-5-视频播放控制\",\"link\":\"#_2-5-视频播放控制\",\"children\":[{\"level\":3,\"title\":\"3.1 基本事件\",\"slug\":\"_3-1-基本事件\",\"link\":\"#_3-1-基本事件\",\"children\":[]},{\"level\":3,\"title\":\"3.2 播放错误\",\"slug\":\"_3-2-播放错误\",\"link\":\"#_3-2-播放错误\",\"children\":[]}]},{\"level\":2,\"title\":\"4.1 快速开始\",\"slug\":\"_4-1-快速开始\",\"link\":\"#_4-1-快速开始\",\"children\":[]}],\"git\":{\"updatedTime\":1721805748000,\"contributors\":[{\"name\":\"袁果锅\",\"email\":\"2914310412@qq.com\",\"commits\":1}]},\"filePathRelative\":\"常用笔记/视频播放插件.md\",\"excerpt\":\"\\n<h1>一 介绍</h1>\\n<p>一款基于 vue.js 的轻量级的视频播放器插件插件</p>\\n<ul>\\n<li>1.1 官方文档</li>\\n</ul>\\n<div class=\\\"language-python\\\" data-highlighter=\\\"prismjs\\\" data-ext=\\\"py\\\" data-title=\\\"py\\\"><pre class=\\\"language-python\\\"><code><span class=\\\"line\\\">https<span class=\\\"token punctuation\\\">:</span><span class=\\\"token operator\\\">//</span>core<span class=\\\"token operator\\\">-</span>player<span class=\\\"token punctuation\\\">.</span>github<span class=\\\"token punctuation\\\">.</span>io<span class=\\\"token operator\\\">/</span>vue<span class=\\\"token operator\\\">-</span>core<span class=\\\"token operator\\\">-</span>video<span class=\\\"token operator\\\">-</span>player<span class=\\\"token operator\\\">/</span>zh<span class=\\\"token operator\\\">/</span>get<span class=\\\"token operator\\\">-</span>started<span class=\\\"token punctuation\\\">.</span>html</span>\\n<span class=\\\"line\\\"></span></code></pre></div>\"}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
