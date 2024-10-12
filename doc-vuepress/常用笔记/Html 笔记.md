@@ -2,7 +2,7 @@
 
 ##  marquee：跑马灯元素
 
-**<img src="https://gitee.com/shixinde/picture-bed/raw/master/WeChat_20241011143155.gif"/>**
+**<img referrer="no-referrer" src="https://gitee.com/shixinde/picture-bed/raw/master/WeChat_20241011143155.gif"/>**
 
 ```html
       <div class="page-plate-group page-plate-group-case">

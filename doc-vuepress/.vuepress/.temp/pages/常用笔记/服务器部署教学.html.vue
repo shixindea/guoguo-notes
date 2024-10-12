@@ -2,7 +2,7 @@
 <h2 id="华为云-阿里云-百度云等等" tabindex="-1"><a class="header-anchor" href="#华为云-阿里云-百度云等等"><span>华为云 阿里云 百度云等等</span></a></h2>
 <h1 id="windows部署" tabindex="-1"><a class="header-anchor" href="#windows部署"><span>windows部署</span></a></h1>
 <h2 id="打开iis-全名-internet-information-services-iis-管理器" tabindex="-1"><a class="header-anchor" href="#打开iis-全名-internet-information-services-iis-管理器"><span>打开IIS 全名  Internet Information Services (IIS)管理器</span></a></h2>
-<p><img src="https://gitee.com/shixinde/picture-bed/raw/master/image-20240927214405743.png" alt="image-20240927214405743"></p>
+<img src="https://gitee.com/shixinde/picture-bed/raw/master/image-20240927214405743.png"/>
 <h2 id="添加网站" tabindex="-1"><a class="header-anchor" href="#添加网站"><span>添加网站</span></a></h2>
 <p><img src="https://gitee.com/shixinde/picture-bed/raw/master/image-20240927214346579.png" alt="image-20240927214346579"></p>
 <h2 id="点击启动遇到第一个报错-【万维网发布服务-w3svc-已停止】" tabindex="-1"><a class="header-anchor" href="#点击启动遇到第一个报错-【万维网发布服务-w3svc-已停止】"><span>点击启动遇到第一个报错 【万维网发布服务(w3svc)已停止】</span></a></h2>
