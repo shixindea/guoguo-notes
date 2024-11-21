@@ -1,0 +1,32 @@
+<template><div><h1 id="python-学习" tabindex="-1"><a class="header-anchor" href="#python-学习"><span>Python 学习</span></a></h1>
+<h2 id="一、选择合适的镜像" tabindex="-1"><a class="header-anchor" href="#一、选择合适的镜像"><span>一、选择合适的镜像</span></a></h2>
+<p>Python官网提供了全球多个镜像站点供开发者选择，但对于国内开发者来说，选择一个速度快、更新频率高的国内镜像站点非常重要。以下是一些常用的国内镜像站点：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token number">1</span>. 清华大学开源软件镜像站: https://mirrors.tuna.tsinghua.edu.cn/        【推荐】</span>
+<span class="line"><span class="token number">2</span>. 阿里云开源镜像站: https://mirrors.aliyun.com/</span>
+<span class="line"><span class="token number">3</span>. 中国科学技术大学镜像站: https://mirrors.ustc.edu.cn/</span>
+<span class="line"><span class="token number">4</span>. 华中科技大学镜像站: https://mirrors.hust.edu.cn/</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上镜像站点都提供了完整的Python包下载，用户可以根据自己的网络情况选择开发调试的镜像站点。</p>
+<h2 id="二、使用镜像站点-国内源" tabindex="-1"><a class="header-anchor" href="#二、使用镜像站点-国内源"><span>二、使用镜像站点  [国内源]</span></a></h2>
+<p>使用Python国内下载镜像非常简单，只需要在pip命令中添加镜像站点的URL即可。例如，使用清华大学的镜像站进行pip包的安装：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line">pip <span class="token function">install</span> <span class="token parameter variable">-i</span> https://pypi.tuna.tsinghua.edu.cn/simple <span class="token punctuation">[</span>package_name<span class="token punctuation">]</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>这种方式可以使用所有基于pip的Python包管理工具，例如Anaconda、easy_install等。</p>
+<h2 id="正则读取" tabindex="-1"><a class="header-anchor" href="#正则读取"><span>正则读取</span></a></h2>
+<blockquote>
+<p>finditer 读取出来是一个数组</p>
+<p>search 读取出来是一个对象</p>
+</blockquote>
+<div class="language-Python line-numbers-mode" data-highlighter="prismjs" data-ext="Python" data-title="Python"><pre v-pre class="language-Python"><code><span class="line">obj2 = re.compile(r&quot; &lt;li&gt;&lt;a href='(?P&lt;href&gt;.*?)'.*?\&quot;&gt;(?P&lt;title&gt;.*?)&lt;/a&gt;&lt;span&gt;.*?&lt;/li&gt;&quot;, re.S)</span>
+<span class="line">result2 = obj2.finditer(resp.text)                  # finditer都取出来是一个数组</span>
+<span class="line">for ite in result2:</span>
+<span class="line">    theHref = ite.group(&quot;href&quot;)</span>
+<span class="line">    theTitle = ite.group(&quot;title&quot;)</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-Python line-numbers-mode" data-highlighter="prismjs" data-ext="Python" data-title="Python"><pre v-pre class="language-Python"><code><span class="line">obj3 = re.compile(r'◎片　　名(?P&lt;title&gt;.*?)&lt;/p&gt;.*?&lt;a href=&quot;(?P&lt;downloadUrl&gt;.*?)&quot;&gt;', re.S)</span>
+<span class="line">result3 = obj3.search(theChildResp.text)</span>
+<span class="line">print(result3.group('title'),result3.group('downloadUrl'))</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

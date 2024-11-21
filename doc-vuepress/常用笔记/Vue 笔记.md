@@ -590,3 +590,17 @@ Vue.directive('preventReClick', {
 
 
 https://blog.csdn.net/python_small_pan/article/details/122381533
+
+## flex-shrink: 0;
+
+**Flex-shrink** 属性定义了flex项目在必要时如何缩小以适应flex容器。当设置为 **0** 时，表示项目不会缩小，即使空间不足也不会压缩项目的大小[1](https://blog.csdn.net/liubangbo/article/details/117567640)。
+
+示例
+
+```css
+item {
+flex-shrink: 0;
+}
+```
+
+在这个例子中，*.item* 类的元素在flex容器中不会缩小其大小，即使其他元素需要更多空间也不会被挤压。

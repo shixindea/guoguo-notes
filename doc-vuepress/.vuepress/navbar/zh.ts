@@ -27,6 +27,10 @@ export const zhNavbar = [
                     text: 'React笔记',
                     link: '/React笔记/React 笔记'
                 },
+                {
+                    text: '袁果锅生态',
+                    link: '/袁果锅生态/Git 规范'
+                },
             ],
     },
     

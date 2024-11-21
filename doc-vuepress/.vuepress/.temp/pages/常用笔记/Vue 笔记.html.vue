@@ -424,6 +424,14 @@
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="websocket" tabindex="-1"><a class="header-anchor" href="#websocket"><span>websocket</span></a></h2>
 <p>https://blog.csdn.net/python_small_pan/article/details/122381533</p>
+<h2 id="flex-shrink-0" tabindex="-1"><a class="header-anchor" href="#flex-shrink-0"><span>flex-shrink: 0;</span></a></h2>
+<p><strong>Flex-shrink</strong> 属性定义了flex项目在必要时如何缩小以适应flex容器。当设置为 <strong>0</strong> 时，表示项目不会缩小，即使空间不足也不会压缩项目的大小<a href="https://blog.csdn.net/liubangbo/article/details/117567640" target="_blank" rel="noopener noreferrer">1</a>。</p>
+<p>示例</p>
+<div class="language-css line-numbers-mode" data-highlighter="prismjs" data-ext="css" data-title="css"><pre v-pre class="language-css"><code><span class="line"><span class="token selector">item</span> <span class="token punctuation">{</span></span>
+<span class="line"><span class="token property">flex-shrink</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span></span>
+<span class="line"><span class="token punctuation">}</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在这个例子中，<em>.item</em> 类的元素在flex容器中不会缩小其大小，即使其他元素需要更多空间也不会被挤压。</p>
 </div></template>
 
 
