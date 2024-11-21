@@ -107,7 +107,8 @@
 <span class="line"></span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> npm run lint</span>
 <span class="line"></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="以下为全文件配置-成功可忽略" tabindex="-1"><a class="header-anchor" href="#以下为全文件配置-成功可忽略"><span>以下为全文件配置 -- 成功可忽略</span></a></h3>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="" tabindex="-1"><a class="header-anchor" href="#"><span></span></a></h2>
+<h3 id="以下为全文件配置-成功可忽略" tabindex="-1"><a class="header-anchor" href="#以下为全文件配置-成功可忽略"><span>以下为全文件配置 -- 成功可忽略</span></a></h3>
 <p><img src="https://aliyxd.oss-cn-beijing.aliyuncs.com/guoguo-notes/image-20241121140156285.png" alt="image-20241121140156285"></p>
 <blockquote>
 <p>.gitignore</p>
