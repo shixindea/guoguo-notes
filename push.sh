@@ -1,4 +1,4 @@
-pnpm docs:build
+# pnpm docs:build
 
 git add .
 
