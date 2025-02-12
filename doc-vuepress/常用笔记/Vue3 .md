@@ -229,3 +229,183 @@ defineProps<{
   });				
 ```
 
+## 防止按钮重复点击
+
+> v-prevent-reclick
+
+```html
+  <el-button v-prevent-reclick @click="onClick">按钮重复点击</el-button>
+
+```
+
+>   main.ts
+
+```ts
+import { createApp } from 'vue'
+const Vue = createApp(App)
+
+// 注册自定义指令 v-prevent-reclick
+Vue.directive('prevent-reclick', {
+    beforeMount(el, binding) {
+        el.disabled = false; // 初始化时启用按钮
+        el.addEventListener('click', () => {
+            el.disabled = true; // 点击后禁用按钮
+            setTimeout(() => {
+                el.disabled = false; // 在指定的时间后重新启用按钮
+            }, binding.value || 1000); // 使用 binding.value 来设置等待时间，默认为 1000 毫秒
+        });
+    },
+    unmounted(el) {
+        // 组件卸载时移除事件监听器
+        el.removeEventListener('click');
+    },
+});
+```
+
+## 封装一个console.log 样式
+
+> 使用
+
+```js
+  import { log } from '@@utils/log';
+
+  const theTable = [{ aa: 1, bb: 2 }];
+  const theObj = {
+    aa: 1,
+    bb: 2,
+  };
+  log.info(theObj);
+  log.error('member-storage');
+  log.success('6');
+  log.warning('member-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storagmember-storage');
+  log.image(
+    '打印img',
+    'https://p3-passport.byteacctimg.com/img/user-avatar/a04c9a09205424e6207169f6301926b9~60x60.awebp',
+  );
+  log.title('member-storage');
+  log.table('the-table', theTable);
+```
+
+> 封装
+
+```ts
+// src/utils/prettyLog.ts
+
+const isEmpty = (value: any) => {
+    return value == null || value === undefined || value === '';
+};
+
+const prettyPrint = (title: string, text: any, color: string) => {
+    if (typeof text === 'object') {
+        console.log(text);
+    } else {
+        console.log(
+            `%c ${title}%c${text} %c`,
+            `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff;`,
+            `border:1px solid ${color}; padding: 1px; border-radius: 0 2px 2px 0; color: ${color};`,
+            'background:transparent'
+        );
+    }
+};
+
+const titlePrint = (title: string) => {
+    console.log(`%c ${title}`, 'font-size: 20px; font-weight: bold; color: #333;');
+};
+
+const tablePrint = (title: string, data: any[]) => {
+    console.groupCollapsed(title);
+    console.table(data);
+    console.groupEnd();
+};
+
+const imagePrint = (title: string, url: string, scale = 1) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+        const c = document.createElement('canvas');
+        const ctx = c.getContext('2d');
+        if (ctx) {
+            c.width = img.width;
+            c.height = img.height;
+            ctx.drawImage(img, 0, 0);
+            const dataUri = c.toDataURL('image/png');
+
+            console.log(
+                `%c ${title}`,
+                `font-size: 1px;
+         padding: ${Math.floor((img.height * scale) / 2)}px ${Math.floor((img.width * scale) / 2)}px;
+         background-image: url(${dataUri});
+         background-repeat: no-repeat;
+         background-size: ${img.width * scale}px ${img.height * scale}px;
+         color: transparent;
+        `
+            );
+        }
+    };
+    img.src = url;
+};
+
+const prettyLog = () => {
+    const info = (textOrTitle: any, content = '') => {
+        const title = isEmpty(content) ? 'Info' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, '#909399');
+    };
+
+    const error = (textOrTitle: any, content = '') => {
+        const title = isEmpty(content) ? 'Error' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, '#F56C6C');
+    };
+
+    const warning = (textOrTitle: any, content = '') => {
+        const title = isEmpty(content) ? 'Warning' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, '#E6A23C');
+    };
+
+    const success = (textOrTitle: any, content = '') => {
+        const title = isEmpty(content) ? 'Success' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, '#67C23A');
+    };
+
+    const title = (text: string) => {
+        titlePrint(text);
+    };
+
+    const table = (title: string, data: any[]) => {
+        tablePrint(title, data);
+    };
+
+    const image = (title: string, imageUrl: string) => {
+        imagePrint(title, imageUrl);
+    };
+
+    return {
+        info,
+        error,
+        warning,
+        success,
+        title,
+        table,
+        image
+    };
+};
+
+// 只在开发环境中使用
+export const log =
+    import.meta.env.MODE === 'development'
+        ? prettyLog()
+        : {
+            info: () => { },
+            error: () => { },
+            warning: () => { },
+            success: () => { },
+            title: () => { },
+            table: () => { },
+            image: () => { }
+        };
+
+```
+

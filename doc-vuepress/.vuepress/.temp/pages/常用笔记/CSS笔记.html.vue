@@ -1,15 +1,4 @@
-<template><div><hr>
-<p>title: CSS 笔记</p>
-<p>date: 2024-8-4
-tags:</p>
-<ul>
-<li>CSS</li>
-<li>笔记
-categories:</li>
-<li>自学篇</li>
-</ul>
-<hr>
-<h2 id="省略号-单行" tabindex="-1"><a class="header-anchor" href="#省略号-单行"><span>省略号 - 单行</span></a></h2>
+<template><div><h2 id="省略号-单行" tabindex="-1"><a class="header-anchor" href="#省略号-单行"><span>省略号 - 单行</span></a></h2>
 <div class="language-scss line-numbers-mode" data-highlighter="prismjs" data-ext="scss" data-title="scss"><pre v-pre class="language-scss"><code><span class="line"><span class="token selector">.singe-line </span><span class="token punctuation">{</span></span>
 <span class="line">    <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span></span>
 <span class="line">    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span></span>

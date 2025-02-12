@@ -432,6 +432,22 @@
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在这个例子中，<em>.item</em> 类的元素在flex容器中不会缩小其大小，即使其他元素需要更多空间也不会被挤压。</p>
-</div></template>
+<h2 id="处理路由加载失败的问题" tabindex="-1"><a class="header-anchor" href="#处理路由加载失败的问题"><span>处理路由加载失败的问题</span></a></h2>
+<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// FIX 新版本上线导致路由模块获取不到 start</span></span>
+<span class="line">router<span class="token punctuation">.</span><span class="token function">onError</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span>
+<span class="line">  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>theTokenStore<span class="token punctuation">.</span>theAjaxIsError<span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
+<span class="line">    Modal<span class="token punctuation">.</span><span class="token function">warning</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span>
+<span class="line">      title<span class="token operator">:</span> <span class="token string">"温馨提示"</span><span class="token punctuation">,</span></span>
+<span class="line">      content<span class="token operator">:</span> <span class="token string">"请求异常请重新加载页面"</span><span class="token punctuation">,</span></span>
+<span class="line">      okText<span class="token operator">:</span> <span class="token string">"重新加载页面"</span><span class="token punctuation">,</span></span>
+<span class="line">      <span class="token function-variable function">onOk</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span>
+<span class="line">        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line">      <span class="token punctuation">}</span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line">  <span class="token punctuation">}</span></span>
+<span class="line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token comment">// FIX 新版本上线导致路由模块获取不到 end</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
 
 

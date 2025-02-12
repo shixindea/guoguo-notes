@@ -604,3 +604,23 @@ flex-shrink: 0;
 ```
 
 在这个例子中，*.item* 类的元素在flex容器中不会缩小其大小，即使其他元素需要更多空间也不会被挤压。
+
+## 处理路由加载失败的问题
+
+```ts
+// FIX 新版本上线导致路由模块获取不到 start
+router.onError(() => {
+  if (!theTokenStore.theAjaxIsError) {
+    Modal.warning({
+      title: "温馨提示",
+      content: "请求异常请重新加载页面",
+      okText: "重新加载页面",
+      onOk: () => {
+        window.location.reload();
+      },
+    });
+  }
+});
+// FIX 新版本上线导致路由模块获取不到 end
+```
+

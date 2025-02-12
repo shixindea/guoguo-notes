@@ -31,5 +31,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "vuepress-plugin-posts-encrypt": "^0.1.0"
   }
 }

@@ -55,10 +55,19 @@ export default defineUserConfig({
                 selectLanguageText: 'Language',
                 navbar: enNavbar,
                 sidebar: zhSidebar,
+                encrypt: {
+                    config: {
+                        // 这会加密整个 guide 目录，并且两个密码都是可用的
+                        "/袁果锅生态/": ["1234", "5678"],
+                        // 这只会加密 /config/page.html
+                        "/常用笔记/插件库.html": "1234",
+                    },
+                },
 
 
             }
-        }
+        },
+
 
     }),
     plugins: [
@@ -67,7 +76,16 @@ export default defineUserConfig({
             indexContent: true,
             queryHistoryCount: 5,
             resultHistoryCount: 5,
-        })
+        }),
+        [
+            'posts-encrypt',
+            {
+                route: '/auth',
+                passwd: '123456',
+                encryptInDev: true,
+                expires: 1000 * 60
+            }
+        ]
 
     ],
 })

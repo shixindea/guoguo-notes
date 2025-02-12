@@ -6,7 +6,7 @@
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2 id="格式化工具-pnpm-lint" tabindex="-1"><a class="header-anchor" href="#格式化工具-pnpm-lint"><span>格式化工具 --- pnpm lint</span></a></h2>
 <div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line">安装</span>
-<span class="line">  <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span>  pretty-quick</span>
+<span class="line">  <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span>  pretty-quick   或者   <span class="token function">pnpm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span>  pretty-quick</span>
 <span class="line"> </span>
 <span class="line">执行</span>
 <span class="line">  <span class="token string">"scripts"</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span></span>
@@ -20,12 +20,13 @@
 <blockquote>
 <p>下载依赖</p>
 </blockquote>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"> <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span>  prettier @shixinde/guoguo-prettier  </span>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"> <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span>  prettier @shixinde/guoguo-prettier        //npm</span>
+<span class="line"> <span class="token function">pnpm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span>  prettier @shixinde/guoguo-prettier      //pnpm</span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>添加配置</p>
 </blockquote>
-<div class="language-diff line-numbers-mode" data-highlighter="prismjs" data-ext="diff" data-title="diff"><pre v-pre class="language-diff"><code><span class="line">// 根目录的 .prettierrc.js</span>
+<div class="language-diff line-numbers-mode" data-highlighter="prismjs" data-ext="diff" data-title="diff"><pre v-pre class="language-diff"><code><span class="line">// 根目录的 .prettierrc.js   如果报错  改为cjs  .prettierrc.cjs</span>
 <span class="line">module.exports = {</span>
 <span class="line"><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">   ...require('@shixinde/guoguo-prettier'),</span>
 <span class="line"></span></span>};</span>
@@ -37,16 +38,28 @@
 <span class="line">dist</span>
 <span class="line">.history</span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="提交规范工具-pnpm-gitcz" tabindex="-1"><a class="header-anchor" href="#提交规范工具-pnpm-gitcz"><span>提交规范工具 --- pnpm gitcz</span></a></h2>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>如果遇到报错</p>
+</blockquote>
+<p><img src="https://aliyxd.oss-cn-beijing.aliyuncs.com/guoguo-notes/image-20241122162443752.png" alt="image-20241122162443752"></p>
+<blockquote>
+<p><strong>解决方案</strong></p>
+<p>将根目录的<code v-pre> .prettierrc.js</code>   改为cjs   ===&gt;   <code v-pre>.prettierrc.cjs</code></p>
+</blockquote>
+<h2 id="提交规范工具-pnpm-gitcz" tabindex="-1"><a class="header-anchor" href="#提交规范工具-pnpm-gitcz"><span>提交规范工具 --- pnpm gitcz</span></a></h2>
 <blockquote>
 <p>安装</p>
 </blockquote>
 <div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> commitizen  //全局安装  安装过可以不用安装</span>
 <span class="line"></span>
 <span class="line"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> cz-git</span>
-<span class="line"><span class="token function">npm</span> <span class="token function">install</span> @shixinde/guoguo-cz --save-dev</span>
+<span class="line"><span class="token function">pnpm</span> <span class="token function">install</span> @shixinde/guoguo-cz --save-dev</span>
+<span class="line"><span class="token function">pnpm</span> <span class="token function">install</span> @commitlint/<span class="token punctuation">{</span>config-conventional,cli<span class="token punctuation">}</span></span>
+<span class="line"></span>
+<span class="line">快速安装三个依赖</span>
+<span class="line"><span class="token function">pnpm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> cz-git @commitlint/<span class="token punctuation">{</span>config-conventional,cli<span class="token punctuation">}</span> @shixinde/guoguo-cz --save-dev</span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <ol>
 <li>配置   ----&gt;   在 package.json 中添加 <code v-pre>config.commitizen </code> 配置</li>
 </ol>
@@ -78,7 +91,7 @@
 <span class="line">  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"@commitlint/config-conventional"</span><span class="token punctuation">,</span> <span class="token string">"@shixinde/guoguo-cz"</span><span class="token punctuation">]</span><span class="token punctuation">,</span></span>
 <span class="line"><span class="token punctuation">}</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="安装-commitlint-工具和规则集" tabindex="-1"><a class="header-anchor" href="#安装-commitlint-工具和规则集"><span>安装 commitlint 工具和规则集</span></a></h2>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="安装-commitlint-工具和规则集-【使用袁果锅生态可省略此步骤】" tabindex="-1"><a class="header-anchor" href="#安装-commitlint-工具和规则集-【使用袁果锅生态可省略此步骤】"><span>安装 commitlint 工具和规则集 【使用袁果锅生态可省略此步骤】</span></a></h2>
 <div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token function">npm</span> <span class="token function">install</span> --save-dev @commitlint/cli @commitlint/config-conventional</span>
 <span class="line"></span>
 <span class="line"></span></code></pre>
@@ -93,7 +106,7 @@
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></blockquote>
 <h2 id="安装-husky-用于git-拦截" tabindex="-1"><a class="header-anchor" href="#安装-husky-用于git-拦截"><span>安装 husky （用于git 拦截）</span></a></h2>
-<div class="language-cmd line-numbers-mode" data-highlighter="prismjs" data-ext="cmd" data-title="cmd"><pre v-pre class="language-cmd"><code><span class="line">npm install husky --save-dev   // 安装依赖</span>
+<div class="language-cmd line-numbers-mode" data-highlighter="prismjs" data-ext="cmd" data-title="cmd"><pre v-pre class="language-cmd"><code><span class="line">npm install husky --save-dev  或者 pnpm install husky --save-dev   // 安装依赖</span>
 <span class="line"></span>
 <span class="line">npx husky-init   // 安装初始化内容</span>
 <span class="line"></span></code></pre>
@@ -105,9 +118,16 @@
 <span class="line"></span>
 <span class="line"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">  npm test</span>
 <span class="line"></span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> npm run lint</span>
-<span class="line"></span></span></span>
+<span class="line"></span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>增加 <code v-pre>commit-msg</code> 文件</p>
+</blockquote>
+<div class="language-diff line-numbers-mode" data-highlighter="prismjs" data-ext="diff" data-title="diff"><pre v-pre class="language-diff"><code><span class="line">#!/usr/bin/env sh</span>
+<span class="line">. "$(dirname "$0")/_/husky.sh"</span>
+<span class="line"></span>
+<span class="line">npx --no-install commitlint --edit $1</span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="以下为全文件配置-成功可忽略" tabindex="-1"><a class="header-anchor" href="#以下为全文件配置-成功可忽略"><span>以下为全文件配置 -- 成功可忽略</span></a></h3>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="以下为全文件配置-成功可忽略" tabindex="-1"><a class="header-anchor" href="#以下为全文件配置-成功可忽略"><span>以下为全文件配置 -- 成功可忽略</span></a></h3>
 <p><img src="https://aliyxd.oss-cn-beijing.aliyuncs.com/guoguo-notes/image-20241121140156285.png" alt="image-20241121140156285"></p>
 <blockquote>
 <p>.gitignore</p>

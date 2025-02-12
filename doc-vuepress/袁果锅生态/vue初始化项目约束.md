@@ -14,7 +14,7 @@ npm install -g commitizen
 
 ```sh
 安装
-  npm install -D  pretty-quick
+  npm install -D  pretty-quick   或者   pnpm install -D  pretty-quick
  
 执行
   "scripts": {
@@ -30,13 +30,14 @@ npm install -g commitizen
 > 下载依赖
 
 ```sh
- npm install -D  prettier @shixinde/guoguo-prettier  
+ npm install -D  prettier @shixinde/guoguo-prettier        //npm
+ pnpm install -D  prettier @shixinde/guoguo-prettier      //pnpm
 ```
 
 > 添加配置
 
 ```diff
-// 根目录的 .prettierrc.js
+// 根目录的 .prettierrc.js   如果报错  改为cjs  .prettierrc.cjs
 module.exports = {
     ...require('@shixinde/guoguo-prettier'),
 };
@@ -49,6 +50,16 @@ dist
 .history
 ```
 
+> 如果遇到报错
+
+![image-20241122162443752](https://aliyxd.oss-cn-beijing.aliyuncs.com/guoguo-notes/image-20241122162443752.png)
+
+> **解决方案**
+>
+> 将根目录的` .prettierrc.js`   改为cjs   ===>   `.prettierrc.cjs`
+
+
+
 
 
 ## 提交规范工具 --- pnpm gitcz
@@ -59,7 +70,11 @@ dist
 npm install -g commitizen  //全局安装  安装过可以不用安装
 
 npm install -D cz-git
-npm install @shixinde/guoguo-cz --save-dev
+pnpm install @shixinde/guoguo-cz --save-dev
+pnpm install @commitlint/{config-conventional,cli}
+
+快速安装三个依赖
+pnpm install -D cz-git @commitlint/{config-conventional,cli} @shixinde/guoguo-cz --save-dev
 ```
 
 >1. 配置   ---->   在 package.json 中添加 `config.commitizen ` 配置
@@ -96,7 +111,7 @@ module.exports = {
 
 
 
-## 安装 commitlint 工具和规则集
+## 安装 commitlint 工具和规则集 【使用袁果锅生态可省略此步骤】
 
 ```bash
 npm install --save-dev @commitlint/cli @commitlint/config-conventional
@@ -116,7 +131,7 @@ npm install --save-dev @commitlint/cli @commitlint/config-conventional
 ## 安装 husky （用于git 拦截）
 
 ```cmd
-npm install husky --save-dev   // 安装依赖
+npm install husky --save-dev  或者 pnpm install husky --save-dev   // 安装依赖
 
 npx husky-init   // 安装初始化内容
 ```
@@ -129,8 +144,18 @@ npx husky-init   // 安装初始化内容
 
 -  npm test
 + npm run lint
-
 ```
+
+> 增加 `commit-msg` 文件
+
+```diff
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit $1
+```
+
+
 
 ### 以下为全文件配置 -- 成功可忽略
 
