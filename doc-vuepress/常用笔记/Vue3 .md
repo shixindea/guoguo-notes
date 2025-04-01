@@ -409,3 +409,28 @@ export const log =
 
 ```
 
+## 移动排序  上移  下移
+
+```js
+  const onMove = async (index: number, isUp?: boolean) => {
+    try {
+      const theDatas = cloneDeep(thePageConfig.value);
+      const theNext = isUp ? index - 1 : index + 1;
+      theDatas[index] = theDatas.splice(theNext, 1, theDatas[index])[0];
+      thePageConfig.value[index] = thePageConfig.value.splice(
+        theNext,
+        1,
+        thePageConfig.value[index],
+      )[0];
+    } catch (err) {}
+  };
+
+  const onUp = async (index: number) => {
+    onMove(index, true);
+  };
+
+  const onDown = async (index: number) => {
+    onMove(index);
+  };
+```
+
