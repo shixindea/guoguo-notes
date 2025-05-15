@@ -388,3 +388,31 @@ origin 是 remote name
 gh-pages 是目标分支名称
 ```
 
+## 当本地登陆了一个账号，但是要拉取另一个账号的git地址 
+
+# [git 使用采坑 - The project you were looking for could not be found 解决方式](https://www.oschina.net/action/GoToLink?url=https%3A%2F%2Failijie.top%2Farchives%2Fgit-the-project-you-were-looking-for-could-not-be-found-)
+
+问题描述：使用 git clone 项目，出现这个问题：The project you were looking for could not be found.
+
+原因：gi t 自动保存 git 密码的功能（自己在单位电脑用了码云和 github 做了仓库，估计起了冲突）
+
+解决方案一：
+
+ git clone [http://@git.coding.net/name/project.git](https://www.oschina.net/action/GoToLink?url=http%3A%2F%2F@git.coding.net%2Fname%2Fproject.git)  ---- 失败
+
+添加远程地址的时候带上用户名及密码即可解决，格式如下：
+
+ git clone [http://yourname:password@git.coding.net/name/project.git](https://www.oschina.net/action/GoToLink?url=http%3A%2F%2Fyourname%3Apassword@git.coding.net%2Fname%2Fproject.git) ---- 成功
+
+解决方案二：
+
+在自己的项目路径上加上自己的用户名， 例如： Git clone [http://git.coding.net/name/project.git](https://www.oschina.net/action/GoToLink?url=http%3A%2F%2Fgit.coding.net%2Fname%2Fproject.git) ---- 失败 Git clone [http://git 账户名 @git.coding.net/name/project.git](https://www.oschina.net/action/GoToLink?url=http%3A%2F%2Fgit账户名@git.coding.net%2Fname%2Fproject.git) 然后再弹出的密码输入指令后面输入密码 ---- 成功
+
+解决方案三：
+
+清除本地 git 账户，重新输入用户名密码（最优）
+
+git config --system --unset credential.helper
+之后再进行 git 操作时，弹出用户名密码窗口，输入即可
+
+有问题，请留言！

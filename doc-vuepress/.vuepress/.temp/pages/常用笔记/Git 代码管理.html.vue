@@ -304,6 +304,21 @@
 <span class="line">origin 是 remote name</span>
 <span class="line">gh-pages 是目标分支名称</span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="当本地登陆了一个账号-但是要拉取另一个账号的git地址" tabindex="-1"><a class="header-anchor" href="#当本地登陆了一个账号-但是要拉取另一个账号的git地址"><span>当本地登陆了一个账号，但是要拉取另一个账号的git地址</span></a></h2>
+<h1 id="git-使用采坑-the-project-you-were-looking-for-could-not-be-found-解决方式" tabindex="-1"><a class="header-anchor" href="#git-使用采坑-the-project-you-were-looking-for-could-not-be-found-解决方式"><span><a href="https://www.oschina.net/action/GoToLink?url=https%3A%2F%2Failijie.top%2Farchives%2Fgit-the-project-you-were-looking-for-could-not-be-found-" target="_blank" rel="noopener noreferrer">git 使用采坑 - The project you were looking for could not be found 解决方式</a></span></a></h1>
+<p>问题描述：使用 git clone 项目，出现这个问题：The project you were looking for could not be found.</p>
+<p>原因：gi t 自动保存 git 密码的功能（自己在单位电脑用了码云和 github 做了仓库，估计起了冲突）</p>
+<p>解决方案一：</p>
+<p>git clone <a href="https://www.oschina.net/action/GoToLink?url=http%3A%2F%2F@git.coding.net%2Fname%2Fproject.git" target="_blank" rel="noopener noreferrer">http://@git.coding.net/name/project.git</a>  ---- 失败</p>
+<p>添加远程地址的时候带上用户名及密码即可解决，格式如下：</p>
+<p>git clone <a href="https://www.oschina.net/action/GoToLink?url=http%3A%2F%2Fyourname%3Apassword@git.coding.net%2Fname%2Fproject.git" target="_blank" rel="noopener noreferrer">http://yourname:password@git.coding.net/name/project.git</a> ---- 成功</p>
+<p>解决方案二：</p>
+<p>在自己的项目路径上加上自己的用户名， 例如： Git clone <a href="https://www.oschina.net/action/GoToLink?url=http%3A%2F%2Fgit.coding.net%2Fname%2Fproject.git" target="_blank" rel="noopener noreferrer">http://git.coding.net/name/project.git</a> ---- 失败 Git clone <a href="https://www.oschina.net/action/GoToLink?url=http%3A%2F%2Fgit%E8%B4%A6%E6%88%B7%E5%90%8D@git.coding.net%2Fname%2Fproject.git" target="_blank" rel="noopener noreferrer">http://git 账户名 @git.coding.net/name/project.git</a> 然后再弹出的密码输入指令后面输入密码 ---- 成功</p>
+<p>解决方案三：</p>
+<p>清除本地 git 账户，重新输入用户名密码（最优）</p>
+<p>git config --system --unset credential.helper
+之后再进行 git 操作时，弹出用户名密码窗口，输入即可</p>
+<p>有问题，请留言！</p>
+</div></template>
 
 

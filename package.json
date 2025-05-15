@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "start": "vuepress dev doc-vuepress",
-    "docs:dev": "vuepress dev doc-vuepress",
-    "docs:build": "vuepress build doc-vuepress",
+    "dev": "vuepress dev doc-vuepress",
+    "build": "vuepress build doc-vuepress",
     "release": "npm version patch && npm publish"
   },
   "keywords": [

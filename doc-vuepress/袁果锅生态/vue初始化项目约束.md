@@ -21,6 +21,23 @@ npm install -g commitizen
     "lint": "pretty-quick --staged",
   },
 
+或着--------------------------------------------------------------------------
+
+ pnpm install lint-staged
+ 
+   "scripts": {
+    "lint": "lint-staged",
+  },
+  
+  "lint-staged": {
+    "*": [
+      "prettier --write",
+      "git add ."
+    ]
+  },
+
+
+
 使用
   npm run lint | pnpm lint
 ```
@@ -48,6 +65,25 @@ pnpm-lock.yaml
 public
 dist
 .history
+
+pnpm-lock.yaml
+public
+dist
+.history
+pnpm-lock.yaml
+static/
+.gitignore
+.prettierignore
+.prettierrc.json
+commitlint.config.mjs
+*.json
+*.md
+*.sh
+.husky
+node_modules/
+.vscode/
+**/*.ico
+
 ```
 
 > 如果遇到报错
@@ -154,6 +190,28 @@ npx husky-init   // 安装初始化内容
 
 npx --no-install commitlint --edit $1
 ```
+
+> Mac 电脑有可能会出现 commit-msg 钩子未生效问题
+>
+> 执行下面这个命令可以。.husky/* 为目录层级
+
+```ts
+chmod 777 .husky/*
+```
+
+链接 https://blog.csdn.net/zy21131437/article/details/132713867
+
+![image-20250220164845983](https://aliyxd.oss-cn-beijing.aliyuncs.com/image-20250220164845983.png)
+
+## 增加国内镜像
+
+添加 .npmrc 文件
+
+```js
+registry=https://registry.npmmirror.com
+```
+
+
 
 
 

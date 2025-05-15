@@ -1,3 +1,7 @@
-## 备注
+### vue架构
 
->\- OSS 图片地址裁切配置： ?x-oss-process=image/resize,w_164,h_164,m_fill/quality,q_100
+```npm
+npm install dotenv cross-env --save-dev
+```
+
+可以读取不同的环境变量 

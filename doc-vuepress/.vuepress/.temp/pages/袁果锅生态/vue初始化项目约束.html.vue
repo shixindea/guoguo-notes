@@ -13,10 +13,27 @@
 <span class="line">    <span class="token string">"lint"</span><span class="token builtin class-name">:</span> <span class="token string">"pretty-quick --staged"</span>,</span>
 <span class="line">  <span class="token punctuation">}</span>,</span>
 <span class="line"></span>
+<span class="line">或着--------------------------------------------------------------------------</span>
+<span class="line"></span>
+<span class="line"> <span class="token function">pnpm</span> <span class="token function">install</span> lint-staged</span>
+<span class="line"> </span>
+<span class="line">   <span class="token string">"scripts"</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span></span>
+<span class="line">    <span class="token string">"lint"</span><span class="token builtin class-name">:</span> <span class="token string">"lint-staged"</span>,</span>
+<span class="line">  <span class="token punctuation">}</span>,</span>
+<span class="line">  </span>
+<span class="line">  <span class="token string">"lint-staged"</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span></span>
+<span class="line">    <span class="token string">"*"</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span></span>
+<span class="line">      <span class="token string">"prettier --write"</span>,</span>
+<span class="line">      <span class="token string">"git add ."</span></span>
+<span class="line">    <span class="token punctuation">]</span></span>
+<span class="line">  <span class="token punctuation">}</span>,</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
 <span class="line">使用</span>
 <span class="line">  <span class="token function">npm</span> run lint <span class="token operator">|</span> <span class="token function">pnpm</span> lint</span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="格式化规范" tabindex="-1"><a class="header-anchor" href="#格式化规范"><span>格式化规范</span></a></h2>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="格式化规范" tabindex="-1"><a class="header-anchor" href="#格式化规范"><span>格式化规范</span></a></h2>
 <blockquote>
 <p>下载依赖</p>
 </blockquote>
@@ -37,8 +54,27 @@
 <span class="line">public</span>
 <span class="line">dist</span>
 <span class="line">.history</span>
+<span class="line"></span>
+<span class="line">pnpm-lock.yaml</span>
+<span class="line">public</span>
+<span class="line">dist</span>
+<span class="line">.history</span>
+<span class="line">pnpm-lock.yaml</span>
+<span class="line">static/</span>
+<span class="line">.gitignore</span>
+<span class="line">.prettierignore</span>
+<span class="line">.prettierrc.json</span>
+<span class="line">commitlint.config.mjs</span>
+<span class="line">*.json</span>
+<span class="line">*.md</span>
+<span class="line">*.sh</span>
+<span class="line">.husky</span>
+<span class="line">node_modules/</span>
+<span class="line">.vscode/</span>
+<span class="line">**/*.ico</span>
+<span class="line"></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>如果遇到报错</p>
 </blockquote>
 <p><img src="https://aliyxd.oss-cn-beijing.aliyuncs.com/guoguo-notes/image-20241122162443752.png" alt="image-20241122162443752"></p>
@@ -127,7 +163,19 @@
 <span class="line"></span>
 <span class="line">npx --no-install commitlint --edit $1</span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="以下为全文件配置-成功可忽略" tabindex="-1"><a class="header-anchor" href="#以下为全文件配置-成功可忽略"><span>以下为全文件配置 -- 成功可忽略</span></a></h3>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>Mac 电脑有可能会出现 commit-msg 钩子未生效问题</p>
+<p>执行下面这个命令可以。.husky/* 为目录层级</p>
+</blockquote>
+<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line">chmod <span class="token number">777</span> <span class="token punctuation">.</span>husky<span class="token comment">/*</span>
+<span class="line"></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>链接 https://blog.csdn.net/zy21131437/article/details/132713867</p>
+<p><img src="https://aliyxd.oss-cn-beijing.aliyuncs.com/image-20250220164845983.png" alt="image-20250220164845983"></p>
+<h2 id="增加国内镜像" tabindex="-1"><a class="header-anchor" href="#增加国内镜像"><span>增加国内镜像</span></a></h2>
+<p>添加 .npmrc 文件</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line">registry<span class="token operator">=</span>https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>registry<span class="token punctuation">.</span>npmmirror<span class="token punctuation">.</span>com</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3 id="以下为全文件配置-成功可忽略" tabindex="-1"><a class="header-anchor" href="#以下为全文件配置-成功可忽略"><span>以下为全文件配置 -- 成功可忽略</span></a></h3>
 <p><img src="https://aliyxd.oss-cn-beijing.aliyuncs.com/guoguo-notes/image-20241121140156285.png" alt="image-20241121140156285"></p>
 <blockquote>
 <p>.gitignore</p>
