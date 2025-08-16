@@ -1,6 +1,6 @@
 {
   "name": "@shixinde/vuepress-theme-init",
-  "version": "1.0.7",
+  "version": "1.2.1",
   "description": "",
   "scripts": {
     "start": "vuepress dev doc-vuepress",
