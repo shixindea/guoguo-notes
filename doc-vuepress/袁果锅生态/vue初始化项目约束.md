@@ -21,6 +21,7 @@ npm install -g commitizen
     "lint": "pretty-quick --staged",
   },
 
+"lint": "git add . && pretty-quick --staged && git add . ",
 或着--------------------------------------------------------------------------
 
  pnpm install lint-staged
@@ -50,6 +51,14 @@ npm install -g commitizen
  npm install -D  prettier @shixinde/guoguo-prettier        //npm
  pnpm install -D  prettier @shixinde/guoguo-prettier      //pnpm
 ```
+
+>pnpm i prettier     ===>    "lint:fix": "prettier --write .",       // 适用于新接手的 项目初始化
+>
+>​    "lint": "pretty-quick --staged",
+>
+>​    "lint:fix": "prettier --write .",
+
+
 
 > 添加配置
 
@@ -113,7 +122,7 @@ pnpm install @commitlint/{config-conventional,cli}
 pnpm install -D cz-git @commitlint/{config-conventional,cli} @shixinde/guoguo-cz --save-dev
 ```
 
->1. 配置   ---->   在 package.json 中添加 `config.commitizen ` 配置
+>1. 配置   ---->   在 package.json 中配置
 
 ```bash
   "scripts": {

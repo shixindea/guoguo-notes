@@ -148,6 +148,26 @@ installElementPlus(app)
 
 
 
+## 编程式弹层 ElMessageBox.confirm
+
+>  import { ElMessageBox } from 'element-plus';
+
+```
+  ElMessageBox.confirm('确认移除该监听器吗？', '提示', {
+      confirmButtonText: '确 认',
+      cancelButtonText: '取 消',
+    })
+      .then(() => {
+        bpmnElementListeners.value.splice(index, 1);
+        elementListenersList.value.splice(index, 1);
+        updateElementExtensions(
+          bpmnElement.value,
+          otherExtensionList.value.concat(bpmnElementListeners.value),
+        );
+      })
+      .catch(() => console.info('操作取消'));
+```
+
 
 
 

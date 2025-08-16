@@ -416,3 +416,164 @@ git config --system --unset credential.helper
 之后再进行 git 操作时，弹出用户名密码窗口，输入即可
 
 有问题，请留言！
+
+
+
+## Git 新建源
+
+```
+# 查看方式：
+git remote -v
+
+# 修改方式：
+git地址url指定远程仓库：（常用）
+git remote set-url origin git@new.server.com:username/repo.git
+
+或者https方式：
+git remote set-url origin https://new.server.com/path/to/repo.git
+
+或者是本地的其他仓库当做remote时候：
+git remote set-url origin file:///path/to/repo.git
+
+或者甚至是亚节点：
+git remote set-url origin path/to/repo.git
+
+```
+
+## 指定上游分支 git branch -u origin/master
+
+`git branch -u origin/master` 的作用是将当前分支的上游分支设置为远程仓库 `origin` 中的 `master` 分支6。
+
+- **参数解析**：
+  - **`-u`**：是 `--set-upstream` 的缩写，用于指定上游分支。
+  - **`origin`**：是远程仓库的默认名称。当你克隆一个仓库时，Git 会自动将远程仓库命名为 `origin`3。
+  - **`master`**：是远程仓库 `origin` 中的主分支名称，这里指定了要将当前分支与远程 `origin` 仓库的 `master` 分支建立关联3。
+- **设置后的效果**：设置好上游分支后，执行 `git pull` 和 `git push` 等命令时，Git 会自动识别当前分支对应的远程分支，简化了操作。例如，后续你在当前分支执行 `git pull` 时，如果没有指定其他参数，Git 会默认从 `origin/master` 拉取代码；执行 `git push` 时，也会默认将当前分支的更改推送到 `origin/master`。这样可以避免每次都手动指定远程仓库和分支名称，提高操作效率。
+
+需要注意的是，`origin/master` 是一个整体的参数，表示远程仓库 `origin` 的 `master` 分支，而不是先指定 `origin` 为远程仓库，再指定 `master` 为分支。如果要设置其他本地分支的上游分支为 `origin/master`，则需要在 `git branch -u origin/master` 后加上本地分支名称。例如，`git branch -u origin/master mybranch`，表示将本地的 `mybranch` 分支的上游分支设置为 `origin/master`。
+
+
+
+## git branch --set-upstream-to=origin/master master 
+
+`it branch -u origin/master` 的作用是将当前分支的上游分支设置为远程仓库 `origin` 中的 `master` 分支6。
+
+- **参数解析**：
+  - **`-u`**：是 `--set-upstream` 的缩写，用于指定上游分支。
+  - **`origin`**：是远程仓库的默认名称。当你克隆一个仓库时，Git 会自动将远程仓库命名为 `origin`3。
+  - **`master`**：是远程仓库 `origin` 中的主分支名称，这里指定了要将当前分支与远程 `origin` 仓库的 `master` 分支建立关联3。
+- **设置后的效果**：设置好上游分支后，执行 `git pull` 和 `git push` 等命令时，Git 会自动识别当前分支对应的远程分支，简化了操作。例如，后续你在当前分支执行 `git pull` 时，如果没有指定其他参数，Git 会默认从 `origin/master` 拉取代码；执行 `git push` 时，也会默认将当前分支的更改推送到 `origin/master`。这样可以避免每次都手动指定远程仓库和分支名称，提高操作效率。
+
+需要注意的是，`origin/master` 是一个整体的参数，表示远程仓库 `origin` 的 `master` 分支，而不是先指定 `origin` 为远程仓库，再指定 `master` 为分支。如果要设置其他本地分支的上游分支为 `origin/master`，则需要在 `git branch -u origin/master` 后加上本地分支名称。例如，`git branch -u origin/master mybranch`，表示将本地的 `mybranch` 分支的上游分支设置为 `origin/master`。
+
+## git push d2dmaster master:d2c-master
+
+将本地master分支的代码 提交到  【d2dmaster】 这个源的 d2c-master 分支
+
+
+
+
+
+在 Git 中，设置账户和邮箱是配置 Git 用户信息的重要步骤。这些信息会出现在你的提交记录中，帮助标识你的身份。以下是设置账户和邮箱的详细步骤：
+
+1. 全局设置
+全局设置会影响你在本地计算机上所有仓库的提交信息。使用以下命令设置全局用户名和邮箱：
+
+# 设置全局用户名
+```bash
+git config --global user.name "你的名字"
+```
+
+# 设置全局邮箱
+```bash
+git config --global user.email "你的邮箱地址"
+```
+
+
+
+```bash
+git config --global user.name "John Doe"
+git config --global user.email "john.doe@example.com"
+
+git config --global user.name "袁果锅"
+git config --global user.email "2914310412@qq.com"
+
+```
+
+
+2. 本地设置
+如果你只想在某个特定的仓库中使用不同的用户名和邮箱，可以在该仓库的目录下运行以下命令：
+
+# 在仓库目录下设置本地用户名
+```bash
+git config user.name "你的名字"
+```
+
+
+
+# 在仓库目录下设置本地邮箱
+git config user.email "你的邮箱地址"
+AI写代码
+例如：
+
+```bash
+cd /path/to/your/repo
+git config user.name "Jane Doe"
+git config user.email "jane.doe@example.com"
+```
+
+
+本地设置会覆盖全局设置，仅对该仓库生效。
+
+3. 检查当前配置
+你可以随时检查当前的 Git 配置信息，确认用户名和邮箱是否设置正确：
+
+
+
+# 查看全局配置
+```bash
+git config --global --list
+```
+
+
+
+# 查看本地配置
+```bash
+git config --list
+```
+
+
+
+4. 修改配置文件
+Git 配置信息存储在配置文件中，你可以直接编辑这些文件来修改设置：
+
+全局配置文件：位于 ~/.gitconfig（Linux/Mac）或 %USERPROFILE%\.gitconfig（Windows）。
+
+本地配置文件：位于仓库目录下的 .git/config 文件。
+
+你可以使用文本编辑器打开这些文件，手动修改 user.name 和 user.email 的值。
+
+5. 注意事项
+邮箱格式：确保邮箱地址格式正确，否则可能会导致提交失败或无法正确关联到你的 GitHub/GitLab 账户。
+
+隐私保护：如果你不想在公开的仓库中显示真实邮箱，可以使用 GitHub 提供的隐私邮箱功能（如 username@users.noreply.github.com）。
+
+多账户管理：如果你需要在同一个机器上管理多个账户（例如，个人项目和工作项目），建议使用本地设置来区分不同仓库的用户名和邮箱。
+
+## 临时禁用凭据，可以重新切换账号
+
+####  临时禁用凭据助手，只对当前仓库生效
+git config --local credential.helper ""
+
+
+#### 清除 credential.helper=store 存储的凭据
+rm ~/.git-credentials
+
+
+####  清除 macOS 钥匙串中存储的 Git 凭据
+git credential-osxkeychain erase
+####  然后输入你的 Git 服务器地址
+host=gitlab.51qqt.com
+protocol=https
+
+####  按两次回车确认
