@@ -42,12 +42,29 @@ export const zhSidebar = {
             children: await listFiles('doc-vuepress/React笔记')   //[ {text: '网站配色', link: '网站配色' }]
         }
     ],
-    '/袁果锅生态/': [
+    // '/袁果锅生态/': [
+    //     {
+    //         text: '袁果锅生态',
+    //         //可折叠侧边栏
+    //         collapsible: false,
+    //         children: await listFiles('doc-vuepress/袁果锅生态')   //[ {text: '网站配色', link: '网站配色' }]
+    //     }
+    // ],
+
+    '/袁果锅生态/团队协作及规范/': [
         {
-            text: '袁果锅生态',
+            text: '团队协作及规范',
             //可折叠侧边栏
             collapsible: false,
-            children: await listFiles('doc-vuepress/袁果锅生态')   //[ {text: '网站配色', link: '网站配色' }]
+            children: await listFiles('doc-vuepress/袁果锅生态/团队协作及规范')   //[ {text: '网站配色', link: '网站配色' }]
+        }
+    ],
+    '/袁果锅生态/项目框架及架构/': [
+        {
+            text: '项目框架及架构',
+            //可折叠侧边栏
+            collapsible: false,
+            children: await listFiles('doc-vuepress/袁果锅生态/项目框架及架构')   //[ {text: '网站配色', link: '网站配色' }]
         }
     ],
 }
