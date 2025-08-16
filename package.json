@@ -8,6 +8,11 @@
     "build": "vuepress build doc-vuepress",
     "release": "npm version patch && npm publish"
   },
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/shixindea/guoguo-notes.git"
+  },
+  "homepage": "https://shixindea.github.io/guoguo-notes/",
   "keywords": [
     "@shixinde",
     "袁果锅",
