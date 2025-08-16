@@ -6,16 +6,24 @@ export const zhNavbar = [
         // 该元素将一直处于激活状态
         // activeMatch: '/',
     },
-
+    {
+        text: '常用笔记',
+        link: '/常用笔记/网站配色'
+    },
+    {
+        text: 'vue笔记及周边生态',
+        link: '/vue笔记及周边生态/Vue 笔记.md'
+    },
+    {
+        text: '袁果锅生态',
+        link: '/袁果锅生态/[重要]框架 - 初始化项目约束.md'
+    },
     //两层嵌套
     {
         text: '个人笔记',
         children:
             [
-                {
-                    text: '常用笔记',
-                    link: '/常用笔记/网站配色'
-                },
+         
                 {
                     text: '飞码篇',
                     link: '/飞码篇/Uni-App笔记'
@@ -27,10 +35,8 @@ export const zhNavbar = [
                     text: 'React笔记',
                     link: '/React笔记/React 笔记'
                 },
-                {
-                    text: '袁果锅生态',
-                    link: '/袁果锅生态/[重要]框架 - 初始化项目约束.md'
-                },
+          
+               
             ],
     },
     

@@ -9,6 +9,14 @@ export const zhSidebar = {
             children: await listFiles('doc-vuepress/常用笔记')   //[ {text: '网站配色', link: '网站配色' }]
         }
     ],
+    '/vue笔记及周边生态/': [
+        {
+            text: 'vue笔记及周边生态',
+            //可折叠侧边栏
+            collapsible: false,
+            children: await listFiles('doc-vuepress/vue笔记及周边生态')   //[ {text: '网站配色', link: '网站配色' }]
+        }
+    ],
     '/飞码篇/': [
         {
             text: '飞码篇',
@@ -25,6 +33,7 @@ export const zhSidebar = {
             children: await listFiles('doc-vuepress/Java')   //[ {text: '网站配色', link: '网站配色' }]
         }
     ],
+    
     '/React笔记/': [
         {
             text: 'React笔记',
