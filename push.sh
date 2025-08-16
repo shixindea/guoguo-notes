@@ -1,6 +1,6 @@
 
 #为了保险 建议手动执行手动  pnpm build
-#pnpm build
+pnpm build
 
 
 git add .
