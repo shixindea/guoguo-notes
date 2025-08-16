@@ -8,8 +8,8 @@ export async function listFiles(directoryPath) {
 
 
         // 输出所有文件名
-        return markdownFiles.map(file => ({
-            text: file,
+        return markdownFiles.map((file,index) => ({
+            text: `${index+1}. ${file}`,
             link: file
         }));
     } catch (error) {
