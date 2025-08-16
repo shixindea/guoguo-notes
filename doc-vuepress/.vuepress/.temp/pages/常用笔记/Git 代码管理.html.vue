@@ -319,6 +319,120 @@
 <p>git config --system --unset credential.helper
 之后再进行 git 操作时，弹出用户名密码窗口，输入即可</p>
 <p>有问题，请留言！</p>
+<h2 id="git-新建源" tabindex="-1"><a class="header-anchor" href="#git-新建源"><span>Git 新建源</span></a></h2>
+<div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre v-pre class="language-text"><code><span class="line"># 查看方式：</span>
+<span class="line">git remote -v</span>
+<span class="line"></span>
+<span class="line"># 修改方式：</span>
+<span class="line">git地址url指定远程仓库：（常用）</span>
+<span class="line">git remote set-url origin git@new.server.com:username/repo.git</span>
+<span class="line"></span>
+<span class="line">或者https方式：</span>
+<span class="line">git remote set-url origin https://new.server.com/path/to/repo.git</span>
+<span class="line"></span>
+<span class="line">或者是本地的其他仓库当做remote时候：</span>
+<span class="line">git remote set-url origin file:///path/to/repo.git</span>
+<span class="line"></span>
+<span class="line">或者甚至是亚节点：</span>
+<span class="line">git remote set-url origin path/to/repo.git</span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="指定上游分支-git-branch-u-origin-master" tabindex="-1"><a class="header-anchor" href="#指定上游分支-git-branch-u-origin-master"><span>指定上游分支 git branch -u origin/master</span></a></h2>
+<p><code v-pre>git branch -u origin/master</code> 的作用是将当前分支的上游分支设置为远程仓库 <code v-pre>origin</code> 中的 <code v-pre>master</code> 分支6。</p>
+<ul>
+<li><strong>参数解析</strong>：
+<ul>
+<li><strong><code v-pre>-u</code></strong>：是 <code v-pre>--set-upstream</code> 的缩写，用于指定上游分支。</li>
+<li><strong><code v-pre>origin</code></strong>：是远程仓库的默认名称。当你克隆一个仓库时，Git 会自动将远程仓库命名为 <code v-pre>origin</code>3。</li>
+<li><strong><code v-pre>master</code></strong>：是远程仓库 <code v-pre>origin</code> 中的主分支名称，这里指定了要将当前分支与远程 <code v-pre>origin</code> 仓库的 <code v-pre>master</code> 分支建立关联3。</li>
+</ul>
+</li>
+<li><strong>设置后的效果</strong>：设置好上游分支后，执行 <code v-pre>git pull</code> 和 <code v-pre>git push</code> 等命令时，Git 会自动识别当前分支对应的远程分支，简化了操作。例如，后续你在当前分支执行 <code v-pre>git pull</code> 时，如果没有指定其他参数，Git 会默认从 <code v-pre>origin/master</code> 拉取代码；执行 <code v-pre>git push</code> 时，也会默认将当前分支的更改推送到 <code v-pre>origin/master</code>。这样可以避免每次都手动指定远程仓库和分支名称，提高操作效率。</li>
+</ul>
+<p>需要注意的是，<code v-pre>origin/master</code> 是一个整体的参数，表示远程仓库 <code v-pre>origin</code> 的 <code v-pre>master</code> 分支，而不是先指定 <code v-pre>origin</code> 为远程仓库，再指定 <code v-pre>master</code> 为分支。如果要设置其他本地分支的上游分支为 <code v-pre>origin/master</code>，则需要在 <code v-pre>git branch -u origin/master</code> 后加上本地分支名称。例如，<code v-pre>git branch -u origin/master mybranch</code>，表示将本地的 <code v-pre>mybranch</code> 分支的上游分支设置为 <code v-pre>origin/master</code>。</p>
+<h2 id="git-branch-set-upstream-to-origin-master-master" tabindex="-1"><a class="header-anchor" href="#git-branch-set-upstream-to-origin-master-master"><span>git branch --set-upstream-to=origin/master master</span></a></h2>
+<p><code v-pre>it branch -u origin/master</code> 的作用是将当前分支的上游分支设置为远程仓库 <code v-pre>origin</code> 中的 <code v-pre>master</code> 分支6。</p>
+<ul>
+<li><strong>参数解析</strong>：
+<ul>
+<li><strong><code v-pre>-u</code></strong>：是 <code v-pre>--set-upstream</code> 的缩写，用于指定上游分支。</li>
+<li><strong><code v-pre>origin</code></strong>：是远程仓库的默认名称。当你克隆一个仓库时，Git 会自动将远程仓库命名为 <code v-pre>origin</code>3。</li>
+<li><strong><code v-pre>master</code></strong>：是远程仓库 <code v-pre>origin</code> 中的主分支名称，这里指定了要将当前分支与远程 <code v-pre>origin</code> 仓库的 <code v-pre>master</code> 分支建立关联3。</li>
+</ul>
+</li>
+<li><strong>设置后的效果</strong>：设置好上游分支后，执行 <code v-pre>git pull</code> 和 <code v-pre>git push</code> 等命令时，Git 会自动识别当前分支对应的远程分支，简化了操作。例如，后续你在当前分支执行 <code v-pre>git pull</code> 时，如果没有指定其他参数，Git 会默认从 <code v-pre>origin/master</code> 拉取代码；执行 <code v-pre>git push</code> 时，也会默认将当前分支的更改推送到 <code v-pre>origin/master</code>。这样可以避免每次都手动指定远程仓库和分支名称，提高操作效率。</li>
+</ul>
+<p>需要注意的是，<code v-pre>origin/master</code> 是一个整体的参数，表示远程仓库 <code v-pre>origin</code> 的 <code v-pre>master</code> 分支，而不是先指定 <code v-pre>origin</code> 为远程仓库，再指定 <code v-pre>master</code> 为分支。如果要设置其他本地分支的上游分支为 <code v-pre>origin/master</code>，则需要在 <code v-pre>git branch -u origin/master</code> 后加上本地分支名称。例如，<code v-pre>git branch -u origin/master mybranch</code>，表示将本地的 <code v-pre>mybranch</code> 分支的上游分支设置为 <code v-pre>origin/master</code>。</p>
+<h2 id="git-push-d2dmaster-master-d2c-master" tabindex="-1"><a class="header-anchor" href="#git-push-d2dmaster-master-d2c-master"><span>git push d2dmaster master:d2c-master</span></a></h2>
+<p>将本地master分支的代码 提交到  【d2dmaster】 这个源的 d2c-master 分支</p>
+<p>在 Git 中，设置账户和邮箱是配置 Git 用户信息的重要步骤。这些信息会出现在你的提交记录中，帮助标识你的身份。以下是设置账户和邮箱的详细步骤：</p>
+<ol>
+<li>全局设置
+全局设置会影响你在本地计算机上所有仓库的提交信息。使用以下命令设置全局用户名和邮箱：</li>
+</ol>
+<h1 id="设置全局用户名" tabindex="-1"><a class="header-anchor" href="#设置全局用户名"><span>设置全局用户名</span></a></h1>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"你的名字"</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h1 id="设置全局邮箱" tabindex="-1"><a class="header-anchor" href="#设置全局邮箱"><span>设置全局邮箱</span></a></h1>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"你的邮箱地址"</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"John Doe"</span></span>
+<span class="line"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"john.doe@example.com"</span></span>
+<span class="line"></span>
+<span class="line"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"袁果锅"</span></span>
+<span class="line"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"2914310412@qq.com"</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>本地设置
+如果你只想在某个特定的仓库中使用不同的用户名和邮箱，可以在该仓库的目录下运行以下命令：</li>
+</ol>
+<h1 id="在仓库目录下设置本地用户名" tabindex="-1"><a class="header-anchor" href="#在仓库目录下设置本地用户名"><span>在仓库目录下设置本地用户名</span></a></h1>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token function">git</span> config user.name <span class="token string">"你的名字"</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h1 id="在仓库目录下设置本地邮箱" tabindex="-1"><a class="header-anchor" href="#在仓库目录下设置本地邮箱"><span>在仓库目录下设置本地邮箱</span></a></h1>
+<p>git config user.email &quot;你的邮箱地址&quot;
+AI写代码
+例如：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token builtin class-name">cd</span> /path/to/your/repo</span>
+<span class="line"><span class="token function">git</span> config user.name <span class="token string">"Jane Doe"</span></span>
+<span class="line"><span class="token function">git</span> config user.email <span class="token string">"jane.doe@example.com"</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>本地设置会覆盖全局设置，仅对该仓库生效。</p>
+<ol start="3">
+<li>检查当前配置
+你可以随时检查当前的 Git 配置信息，确认用户名和邮箱是否设置正确：</li>
+</ol>
+<h1 id="查看全局配置" tabindex="-1"><a class="header-anchor" href="#查看全局配置"><span>查看全局配置</span></a></h1>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--list</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h1 id="查看本地配置" tabindex="-1"><a class="header-anchor" href="#查看本地配置"><span>查看本地配置</span></a></h1>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre class="language-bash"><code><span class="line"><span class="token function">git</span> config <span class="token parameter variable">--list</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><ol start="4">
+<li>修改配置文件
+Git 配置信息存储在配置文件中，你可以直接编辑这些文件来修改设置：</li>
+</ol>
+<p>全局配置文件：位于 ~/.gitconfig（Linux/Mac）或 %USERPROFILE%.gitconfig（Windows）。</p>
+<p>本地配置文件：位于仓库目录下的 .git/config 文件。</p>
+<p>你可以使用文本编辑器打开这些文件，手动修改 user.name 和 user.email 的值。</p>
+<ol start="5">
+<li>注意事项
+邮箱格式：确保邮箱地址格式正确，否则可能会导致提交失败或无法正确关联到你的 GitHub/GitLab 账户。</li>
+</ol>
+<p>隐私保护：如果你不想在公开的仓库中显示真实邮箱，可以使用 GitHub 提供的隐私邮箱功能（如 username@users.noreply.github.com）。</p>
+<p>多账户管理：如果你需要在同一个机器上管理多个账户（例如，个人项目和工作项目），建议使用本地设置来区分不同仓库的用户名和邮箱。</p>
+<h2 id="临时禁用凭据-可以重新切换账号" tabindex="-1"><a class="header-anchor" href="#临时禁用凭据-可以重新切换账号"><span>临时禁用凭据，可以重新切换账号</span></a></h2>
+<h4 id="临时禁用凭据助手-只对当前仓库生效" tabindex="-1"><a class="header-anchor" href="#临时禁用凭据助手-只对当前仓库生效"><span>临时禁用凭据助手，只对当前仓库生效</span></a></h4>
+<p>git config --local credential.helper &quot;&quot;</p>
+<h4 id="清除-credential-helper-store-存储的凭据" tabindex="-1"><a class="header-anchor" href="#清除-credential-helper-store-存储的凭据"><span>清除 credential.helper=store 存储的凭据</span></a></h4>
+<p>rm ~/.git-credentials</p>
+<h4 id="清除-macos-钥匙串中存储的-git-凭据" tabindex="-1"><a class="header-anchor" href="#清除-macos-钥匙串中存储的-git-凭据"><span>清除 macOS 钥匙串中存储的 Git 凭据</span></a></h4>
+<p>git credential-osxkeychain erase</p>
+<h4 id="然后输入你的-git-服务器地址" tabindex="-1"><a class="header-anchor" href="#然后输入你的-git-服务器地址"><span>然后输入你的 Git 服务器地址</span></a></h4>
+<p>host=gitlab.51qqt.com
+protocol=https</p>
+<h4 id="按两次回车确认" tabindex="-1"><a class="header-anchor" href="#按两次回车确认"><span>按两次回车确认</span></a></h4>
 </div></template>
 
 

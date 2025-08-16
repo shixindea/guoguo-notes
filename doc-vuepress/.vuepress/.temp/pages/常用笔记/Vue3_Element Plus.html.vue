@@ -104,6 +104,24 @@
 <span class="line">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-table-column</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="编程式弹层-elmessagebox-confirm" tabindex="-1"><a class="header-anchor" href="#编程式弹层-elmessagebox-confirm"><span>编程式弹层 ElMessageBox.confirm</span></a></h2>
+<blockquote>
+<p>import { ElMessageBox } from 'element-plus';</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre v-pre class="language-text"><code><span class="line">  ElMessageBox.confirm('确认移除该监听器吗？', '提示', {</span>
+<span class="line">      confirmButtonText: '确 认',</span>
+<span class="line">      cancelButtonText: '取 消',</span>
+<span class="line">    })</span>
+<span class="line">      .then(() => {</span>
+<span class="line">        bpmnElementListeners.value.splice(index, 1);</span>
+<span class="line">        elementListenersList.value.splice(index, 1);</span>
+<span class="line">        updateElementExtensions(</span>
+<span class="line">          bpmnElement.value,</span>
+<span class="line">          otherExtensionList.value.concat(bpmnElementListeners.value),</span>
+<span class="line">        );</span>
+<span class="line">      })</span>
+<span class="line">      .catch(() => console.info('操作取消'));</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
 
 

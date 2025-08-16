@@ -33,4 +33,12 @@ export const zhSidebar = {
             children: await listFiles('doc-vuepress/React笔记')   //[ {text: '网站配色', link: '网站配色' }]
         }
     ],
+    '/袁果锅生态/': [
+        {
+            text: '袁果锅生态',
+            //可折叠侧边栏
+            collapsible: false,
+            children: await listFiles('doc-vuepress/袁果锅生态')   //[ {text: '网站配色', link: '网站配色' }]
+        }
+    ],
 }

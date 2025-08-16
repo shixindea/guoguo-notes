@@ -68,9 +68,9 @@
 <td></td>
 </tr>
 <tr>
-<td>vuedraggable</td>
-<td>拖拽插件</td>
-<td></td>
+<td>clsx</td>
+<td>轻量级组合 CSS 类名的库</td>
+<td>https://www.51cto.com/article/809507.html</td>
 </tr>
 <tr>
 <td>vuedraggable</td>

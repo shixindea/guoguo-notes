@@ -29,7 +29,7 @@ export const zhNavbar = [
                 },
                 {
                     text: '袁果锅生态',
-                    link: '/袁果锅生态/GIt 代码提交规范及步骤'
+                    link: '/袁果锅生态/[重要]框架 - 初始化项目约束.md'
                 },
             ],
     },

@@ -1,6 +1,6 @@
-<template><div><h3 id="_4-项目组织规范" tabindex="-1"><a class="header-anchor" href="#_4-项目组织规范"><span>4 项目组织规范</span></a></h3>
+<template><div><h2 id="项目组织规范" tabindex="-1"><a class="header-anchor" href="#项目组织规范"><span>项目组织规范</span></a></h2>
 <p>项目组织规范定义了如何组织一个前端项目, 例如项目的命名、项目的文件结构、版本号规范等等。尤其对于开源项目，规范化的项目组织就更重要了。</p>
-<h4 id="_4-1-通用的项目组织规范" tabindex="-1"><a class="header-anchor" href="#_4-1-通用的项目组织规范"><span>4.1 通用的项目组织规范</span></a></h4>
+<h4 id="通用的项目组织规范" tabindex="-1"><a class="header-anchor" href="#通用的项目组织规范"><span>通用的项目组织规范</span></a></h4>
 <p>一个典型的项目组织规范如下:</p>
 <ul>
 <li>
@@ -79,31 +79,6 @@
 </li>
 </ul>
 <p>任意一个优秀的开源项目都是你的老师，例如React、Vue...</p>
-<div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre v-pre class="language-text"><code><span class="line"> # 启用gzip</span>
-<span class="line">    gzip on;</span>
-<span class="line">    gzip_min_length 1k;</span>
-<span class="line">    gzip_comp_level 6;</span>
-<span class="line">    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript application/vnd.ms-fontobject application/x-font-ttf font/opentype;</span>
-<span class="line">    gzip_vary on;</span>
-<span class="line">    gzip_static on; # 启用静态gzip，直接使用预压缩的.gz文件</span>
-<span class="line">    </span>
-<span class="line">    # 启用brotli（需要安装ngx_brotli模块）</span>
-<span class="line">    brotli on;</span>
-<span class="line">    brotli_comp_level 6;</span>
-<span class="line">    brotli_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript application/vnd.ms-fontobject application/x-font-ttf font/opentype;</span>
-<span class="line">    brotli_static on; # 启用静态brotli，直接使用预压缩的.br文件</span>
-<span class="line">    </span>
-<span class="line">    # 静态资源缓存设置</span>
-<span class="line">    location /web/static/ {</span>
-<span class="line">        expires 30d;</span>
-<span class="line">        add_header Cache-Control "public, max-age=2592000";</span>
-<span class="line">    }</span>
-<span class="line">    </span>
-<span class="line">    # 禁止访问敏感文件</span>
-<span class="line">    location ~ \.(htaccess|env|git) {</span>
-<span class="line">        deny all;</span>
-<span class="line">    }</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+</div></template>
 
 
