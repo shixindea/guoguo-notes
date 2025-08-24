@@ -21,17 +21,21 @@ export default defineUserConfig({
         ],
         [
             'script',
+            {
+                async: true,
+                src: 'https://www.googletagmanager.com/gtag/js?id=G-51R33TNWKN',
+            },
+        ],
+        [
+            'script',
             {},
             `
-            var _hmt = _hmt || [];
-            (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?83576236cbb63909bd3679ae4c21c5fa";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-            })();
-      `
-        ]
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-51R33TNWKN');
+            `,
+        ],
     ],
     lang: 'zh-CN',
     // locales: {
