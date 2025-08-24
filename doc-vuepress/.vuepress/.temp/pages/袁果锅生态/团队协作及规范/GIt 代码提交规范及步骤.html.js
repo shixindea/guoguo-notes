@@ -1,3 +1,16 @@
 import comp from "/Users/guoguo/code/my-project/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/袁果锅生态/团队协作及规范/GIt 代码提交规范及步骤.html.vue"
 const data = JSON.parse("{\"path\":\"/%E8%A2%81%E6%9E%9C%E9%94%85%E7%94%9F%E6%80%81/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E5%8F%8A%E8%A7%84%E8%8C%83/GIt%20%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83%E5%8F%8A%E6%AD%A5%E9%AA%A4.html\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"[GIT] 代码管理\",\"slug\":\"git-代码管理\",\"link\":\"#git-代码管理\",\"children\":[{\"level\":3,\"title\":\"提交的类型\",\"slug\":\"提交的类型\",\"link\":\"#提交的类型\",\"children\":[]},{\"level\":3,\"title\":\"提交格式\",\"slug\":\"提交格式\",\"link\":\"#提交格式\",\"children\":[]},{\"level\":3,\"title\":\"Git 分支\",\"slug\":\"git-分支\",\"link\":\"#git-分支\",\"children\":[]},{\"level\":3,\"title\":\"commit 信息\",\"slug\":\"commit-信息\",\"link\":\"#commit-信息\",\"children\":[]}]},{\"level\":2,\"title\":\"开发提交步骤\",\"slug\":\"开发提交步骤\",\"link\":\"#开发提交步骤\",\"children\":[]}],\"git\":{\"updatedTime\":1755349061000,\"contributors\":[{\"name\":\"袁果锅\",\"email\":\"2914310412@qq.com\",\"commits\":1}]},\"filePathRelative\":\"袁果锅生态/团队协作及规范/GIt 代码提交规范及步骤.md\",\"excerpt\":\"<h2>[GIT] 代码管理</h2>\\n<p>每个项目内置 git commit 命令。</p>\\n<h3>提交的类型</h3>\\n<p>下面的这些只是列举部分，其他可补充。</p>\\n<div class=\\\"language-diff\\\" data-highlighter=\\\"prismjs\\\" data-ext=\\\"diff\\\" data-title=\\\"diff\\\"><pre class=\\\"language-diff\\\"><code><span class=\\\"line\\\">●wip : 正在进行的工作</span>\\n<span class=\\\"line\\\">●feat: 新功能</span>\\n<span class=\\\"line\\\">●config: 各种项目配置</span>\\n<span class=\\\"line\\\">●fix：修复，包括热修复</span>\\n<span class=\\\"line\\\">●refactor: 重构</span>\\n<span class=\\\"line\\\">●style: 修改样式</span>\\n<span class=\\\"line\\\">●type: typescript 类型重新定义</span>\\n<span class=\\\"line\\\">●update: 更新代码以及解决冲突</span>\\n<span class=\\\"line\\\">●trivia: 琐事，如改个文案，换个图片等</span>\\n<span class=\\\"line\\\">●docs: 仅文档更改</span>\\n<span class=\\\"line\\\">●site: 站点或官网的改进</span>\\n<span class=\\\"line\\\">●test: 添加缺少的测试或更正现有测试</span>\\n<span class=\\\"line\\\">●chore: 不修改项目代码。例如更新生成任务、包管理器、项目配置等</span>\\n<span class=\\\"line\\\">●lint: 代码规范修改</span>\\n<span class=\\\"line\\\">●release: 发布新包</span>\\n<span class=\\\"line\\\">●revert: 恢复到提交</span>\\n<span class=\\\"line\\\">●follow: 追随上一个的提交</span>\\n<span class=\\\"line\\\">●others: 其他改动</span>\\n<span class=\\\"line\\\"></span></code></pre></div>\"}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

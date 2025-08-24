@@ -1,3 +1,16 @@
 import comp from "/Users/guoguo/code/my-project/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/Python/Python代码片段.html.vue"
 const data = JSON.parse("{\"path\":\"/Python/Python%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5.html\",\"title\":\"Python代码片段\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"发起一个Get请求\",\"slug\":\"发起一个get请求\",\"link\":\"#发起一个get请求\",\"children\":[]},{\"level\":2,\"title\":\"发起一个Post请求\",\"slug\":\"发起一个post请求\",\"link\":\"#发起一个post请求\",\"children\":[]}],\"git\":{\"updatedTime\":1732174611000,\"contributors\":[{\"name\":\"袁果锅\",\"email\":\"2914310412@qq.com\",\"commits\":1}]},\"filePathRelative\":\"Python/Python代码片段.md\",\"excerpt\":\"\\n<h2>发起一个Get请求</h2>\\n<blockquote>\\n<p>行内式</p>\\n</blockquote>\\n<div class=\\\"language-python\\\" data-highlighter=\\\"prismjs\\\" data-ext=\\\"py\\\" data-title=\\\"py\\\"><pre class=\\\"language-python\\\"><code><span class=\\\"line\\\"><span class=\\\"token keyword\\\">import</span> requests</span>\\n<span class=\\\"line\\\"></span>\\n<span class=\\\"line\\\">url <span class=\\\"token operator\\\">=</span> <span class=\\\"token string\\\">'https://www.sogou.com/web?query=周杰伦'</span></span>\\n<span class=\\\"line\\\"></span>\\n<span class=\\\"line\\\">headers <span class=\\\"token operator\\\">=</span> <span class=\\\"token punctuation\\\">{</span></span>\\n<span class=\\\"line\\\">    <span class=\\\"token string\\\">'user-agent'</span><span class=\\\"token punctuation\\\">:</span> <span class=\\\"token string\\\">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0'</span></span>\\n<span class=\\\"line\\\"><span class=\\\"token punctuation\\\">}</span></span>\\n<span class=\\\"line\\\"></span>\\n<span class=\\\"line\\\">resp <span class=\\\"token operator\\\">=</span> requests<span class=\\\"token punctuation\\\">.</span>get<span class=\\\"token punctuation\\\">(</span>url<span class=\\\"token punctuation\\\">,</span>  headers<span class=\\\"token operator\\\">=</span>headers<span class=\\\"token punctuation\\\">)</span></span>\\n<span class=\\\"line\\\"></span>\\n<span class=\\\"line\\\"><span class=\\\"token keyword\\\">print</span><span class=\\\"token punctuation\\\">(</span>resp<span class=\\\"token punctuation\\\">.</span>text<span class=\\\"token punctuation\\\">)</span></span>\\n<span class=\\\"line\\\"></span>\\n<span class=\\\"line\\\">resp<span class=\\\"token punctuation\\\">.</span>close<span class=\\\"token punctuation\\\">(</span><span class=\\\"token punctuation\\\">)</span>  <span class=\\\"token comment\\\"># 关掉请求</span></span>\\n<span class=\\\"line\\\"></span></code></pre></div>\"}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

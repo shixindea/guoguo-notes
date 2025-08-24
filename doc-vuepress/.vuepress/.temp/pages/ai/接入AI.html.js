@@ -1,3 +1,16 @@
 import comp from "/Users/guoguo/code/my-project/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/ai/接入AI.html.vue"
 const data = JSON.parse("{\"path\":\"/ai/%E6%8E%A5%E5%85%A5AI.html\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"Pom 配置\",\"slug\":\"pom-配置\",\"link\":\"#pom-配置\",\"children\":[]},{\"level\":2,\"title\":\"\",\"slug\":\"\",\"link\":\"#\",\"children\":[]},{\"level\":2,\"title\":\"官网链接\",\"slug\":\"官网链接\",\"link\":\"#官网链接\",\"children\":[]},{\"level\":2,\"title\":\"sse 长链接  单向数据传输 后端 -> 前端\",\"slug\":\"sse-长链接-单向数据传输-后端-前端\",\"link\":\"#sse-长链接-单向数据传输-后端-前端\",\"children\":[]},{\"level\":2,\"title\":\"websorket 双向数据传输\",\"slug\":\"websorket-双向数据传输\",\"link\":\"#websorket-双向数据传输\",\"children\":[]},{\"level\":2,\"title\":\"ai 格式化输出\",\"slug\":\"ai-格式化输出\",\"link\":\"#ai-格式化输出\",\"children\":[]},{\"level\":2,\"title\":\"切换大模型教程\",\"slug\":\"切换大模型教程\",\"link\":\"#切换大模型教程\",\"children\":[]}],\"git\":{\"updatedTime\":1755344722000,\"contributors\":[{\"name\":\"袁果锅\",\"email\":\"2914310412@qq.com\",\"commits\":1}]},\"filePathRelative\":\"ai/接入AI.md\",\"excerpt\":\"<h2>Pom 配置</h2>\\n<div class=\\\"language-text\\\" data-highlighter=\\\"prismjs\\\" data-ext=\\\"text\\\" data-title=\\\"text\\\"><pre class=\\\"language-text\\\"><code><span class=\\\"line\\\"># Spring Boot Admin 配置项</span>\\n<span class=\\\"line\\\">spring:</span>\\n<span class=\\\"line\\\">   ai:</span>\\n<span class=\\\"line\\\">    ollama:</span>\\n<span class=\\\"line\\\">      chat:</span>\\n<span class=\\\"line\\\">        model: qwen3:1.7b</span>\\n<span class=\\\"line\\\">      base-url: http://localhost:11434</span>\\n<span class=\\\"line\\\"></span>\\n<span class=\\\"line\\\"></span></code></pre></div>\"}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

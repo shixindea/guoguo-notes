@@ -19,6 +19,19 @@ export default defineUserConfig({
                 "href": "/favicon.ico"
             }
         ],
+        [
+            'script',
+            {},
+            `
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?83576236cbb63909bd3679ae4c21c5fa";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+            })();
+      `
+        ]
     ],
     lang: 'zh-CN',
     // locales: {
@@ -35,6 +48,7 @@ export default defineUserConfig({
     // },
 
     bundler: viteBundler(),
+  
     theme: defaultTheme({
         // 以下所有配置写在这里！！！
         locales: {
@@ -63,8 +77,6 @@ export default defineUserConfig({
                         "/常用笔记/插件库.html": "1234",
                     },
                 },
-
-
             }
         },
 
