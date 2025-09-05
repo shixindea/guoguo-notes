@@ -50,7 +50,7 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:left">方法</th>
+<th style="text-align:left">·方法</th>
 <th style="text-align:left">说明</th>
 </tr>
 </thead>
@@ -414,6 +414,13 @@
 <div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line"><span class="token comment">// 复制文本</span></span>
 <span class="line">navigator<span class="token punctuation">.</span>clipboard<span class="token punctuation">.</span><span class="token function">writeText</span><span class="token punctuation">(</span>$slot<span class="token punctuation">.</span><span class="token function">default</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>children<span class="token punctuation">)</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="js对象剔除" tabindex="-1"><a class="header-anchor" href="#js对象剔除"><span>JS对象剔除</span></a></h2>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre class="language-javascript"><code><span class="line">Object<span class="token punctuation">.</span><span class="token function">fromEntries</span><span class="token punctuation">(</span></span>
+<span class="line">      Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>baseData<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=></span></span>
+<span class="line">        value <span class="token operator">!==</span> <span class="token keyword">undefined</span> <span class="token operator">&amp;&amp;</span> key <span class="token operator">!==</span> <span class="token string">'pageSize'</span> <span class="token operator">&amp;&amp;</span> key <span class="token operator">!==</span> <span class="token string">'theTabActiveKey'</span></span>
+<span class="line">      <span class="token punctuation">)</span></span>
+<span class="line"><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
 
 

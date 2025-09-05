@@ -69,3 +69,43 @@
   - 如果 `gcTime: 0`，数据会在不再使用时立即从缓存中移除。
   - 如果 `gcTime: 5000`，数据会在 5 秒后从缓存中移除。
   - 适用于内存敏感的场景，但会增加请求次数。
+
+
+
+
+
+
+
+## useQuery 
+
+```tsx
+ const { data, ...rest } = useQuery({
+    queryKey: [...url, requestData],
+    queryFn: () => requestClient.request(url, {
+      data: requestData
+    }),
+    enabled: options?.enabled ?? true,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    staleTime:0,// 5 * 60 * 1000, // 5分钟缓存
+    gcTime: 0//10 * 60 * 1000, // 10分钟垃圾回收
+  });
+  return {
+    data: data?.data?.data?.list || [],
+    ...rest,
+  };
+```
+
+
+
+
+
+## useQuery 系统自动触发
+
+## useMutation 自动处理请求
+
+useMutation点
+目的:用于服务器端的副作用,如POST,PUT,DELETE。
+mutationFn：执行数据变更的异步函数。
+mutate:你调用来触发变更的函数。
+onSuccess:变更成功后用于处理副作用的回调函数。

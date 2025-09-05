@@ -76,7 +76,7 @@ for (var key in map) {
 
 > ###  2、数组的方法
 
-| 方法       | 说明                     |
+| ·方法      | 说明                     |
 | :--------- | :----------------------- |
 | slice()    | 获取数组中的某段数组元素 |
 | unshift()  | 在数组开头添加元素       |
@@ -421,5 +421,15 @@ console.log('立即执行');
 ```js
 // 复制文本
 navigator.clipboard.writeText($slot.default()[0].children)
+```
+
+## JS对象剔除
+
+```js
+Object.fromEntries(
+      Object.entries(baseData).filter(([key, value]) =>
+        value !== undefined && key !== 'pageSize' && key !== 'theTabActiveKey'
+      )
+);
 ```
 

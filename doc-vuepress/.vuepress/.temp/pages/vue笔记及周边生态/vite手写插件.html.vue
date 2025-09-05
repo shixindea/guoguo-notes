@@ -15,11 +15,11 @@
 </blockquote>
 <div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">any</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span>
 <span class="line">    <span class="token keyword">return</span> <span class="token punctuation">{</span></span>
-<span class="line">        <span class="token doc-comment comment">/**</span>
+<span class="line">        <span class="token comment">/**</span>
 <span class="line">         * </span>
-<span class="line">         * <span class="token keyword">@param</span> <span class="token parameter">config</span> vite.config.ts 中写的配置会原封不动的返回</span>
-<span class="line">        * <span class="token keyword">@param</span> <span class="token parameter">env</span> <span class="token punctuation">{</span> mode: 'development', command: 'serve',isSsrBuild: false, isPreview: false <span class="token punctuation">}</span></span>
-<span class="line">         * <span class="token keyword">@returns</span> Object</span>
+<span class="line">         * @param config vite.config.ts 中写的配置会原封不动的返回</span>
+<span class="line">        * @param env { mode: 'development', command: 'serve',isSsrBuild: false, isPreview: false }</span>
+<span class="line">         * @returns Object</span>
 <span class="line">         */</span></span>
 <span class="line">        <span class="token function">config</span><span class="token punctuation">(</span>config<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> env<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
 <span class="line">            <span class="token comment">// console.log('😁😁😁config, env ===>', config, env);</span></span>

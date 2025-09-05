@@ -1,0 +1,135 @@
+<template><div><h2 id="自我介绍" tabindex="-1"><a class="header-anchor" href="#自我介绍"><span>自我介绍</span></a></h2>
+<p>大家好，我...</p>
+<p>果锅（Guoguo）的由来</p>
+<p>=</p>
+<ul>
+<li><a href="https://shixindea.github.io/element-promax-docs/en-US/" target="_blank" rel="noopener noreferrer">Vue3 组件库 Element ProMax</a></li>
+<li><a href="https://shixindea.github.io/shixinde-apifox-swagger/" target="_blank" rel="noopener noreferrer">JavaScript 工具类 Guoguo-utils</a></li>
+<li><a href="https://www.npmjs.com/package/@shixinde/vuepress-theme-init" target="_blank" rel="noopener noreferrer">vuepress 快速模板 Guoguo-vuepress</a></li>
+<li><a href="https://www.npmjs.com/package/@shixinde/vuepress-theme-init" target="_blank" rel="noopener noreferrer">个人笔记 guoguo-notes</a></li>
+<li><a href="https://www.npmjs.com/package/@shixinde/guoguo-cz" target="_blank" rel="noopener noreferrer">Git 提交规范 Guoguo-cz</a></li>
+<li><a href="https://www.npmjs.com/package/@shixinde/apifox-swagger" target="_blank" rel="noopener noreferrer">Apifox Swagger文档生成与TS类型解析工具 @shixinde/apifox-swagger</a></li>
+<li><a href="https://www.npmjs.com/settings/shixinde/packages" target="_blank" rel="noopener noreferrer">其他npm包 @shixinde</a></li>
+</ul>
+<h2 id="框架-vs-架构" tabindex="-1"><a class="header-anchor" href="#框架-vs-架构"><span>框架 vs 架构</span></a></h2>
+<blockquote>
+<ol>
+<li>
+<p>框架是什么：主要分为<code v-pre>约束性框架</code>和 <code v-pre>集成类框架</code></p>
+<p><strong>约束性框架：（Vue、React）-- 从底层构建的“约束型框架</strong></p>
+<ol>
+<li>
+<p>你的代码被框架调用，而不是你去调用框架</p>
+</li>
+<li>
+<p><strong>约定优于配置</strong>：框架通常有明确的目录结构、命名规范和开发模式</p>
+</li>
+</ol>
+<p><strong>集成类框架：（若依、芋道） -- 技术堆积的一个半成品框架</strong></p>
+<ol>
+<li>它提供了一套骨架和约定，让你在这个骨架之上填充具体的业务逻辑来构建应用。</li>
+<li>特点主要体现在快速开发</li>
+</ol>
+</li>
+<li>
+<p>架构是什么：系统的宏观结构设计，它定义了系统由哪些<strong>部分</strong>组成，这些部分之间如何<strong>交互</strong>，以及指导设计和演进的<strong>原则与约束</strong>。主要关心的是如何构建一个<strong>可维护、可扩展、可测试</strong>的复杂系统</p>
+</li>
+</ol>
+</blockquote>
+<p>最简单的例子 Spring Boot 与 Spring Cloud</p>
+<p>综上所述，我们平时使用的Vue、React都属于约束型框架，主要表现是用户使用这个框架真正可以做到约定大于配置，反而集成类框架是将各种技术堆积的结果，一般在项目中我们大多数使用的都是以约束性框架为核心的集成类框架。</p>
+<p>个人理解，初级程序员考虑某一个小业务，主要体现在 <code v-pre>src和自己的小文件夹</code>【代码逻辑没有bug为佳】</p>
+<p>中级程序员可以有意识的考虑整个项目，比如全局代码格式化规范、代码提交规范、项目提交流程、全局loading、hooks、utils等核心业务封装，主要体现在 <code v-pre>包裹src的整个项目文件夹</code>【保证团队其他成员代码写着顺手和有一定的抗极端场景为佳】</p>
+<p>高级程序员考虑的是各个项目间的核心技术的通用性就属于架构层次，主要体现在公司内部组件库、工具类、统一规范、统一各个项目的技术架构等，主要有两种形式 <code v-pre>pnpm-workspace-monorepo</code> 或者 <code v-pre>上传npm包，使用package.json</code>保持各个项目中的通用性。【保证新同学接触到各个框架、在各个项目中交互起来非常通畅为佳】</p>
+<h2 id="公司项目架构、框架" tabindex="-1"><a class="header-anchor" href="#公司项目架构、框架"><span>公司项目架构、框架</span></a></h2>
+<blockquote>
+<p>架构使用 <code v-pre>pnpm-workspace-monorepo</code></p>
+</blockquote>
+<blockquote>
+<ol>
+<li>
+<p>Apifox生成Swagger</p>
+</li>
+<li>
+<p>根据Apifox生成的Swagger二次封装react-query请求</p>
+<ol>
+<li>
+<p>后端数据进入前端代码后统一被封装</p>
+<p><strong>对前后端约束的影响</strong></p>
+<p>待完善 null undefined string|number|enum 类型</p>
+</li>
+</ol>
+</li>
+<li>
+<p>工具类utils</p>
+<ol>
+<li>crypto - 加密解密</li>
+</ol>
+</li>
+<li>
+<p>搭建桥梁</p>
+<ol>
+<li>
+<p>H5被嵌套到小程序中时，调用小程序中的方法</p>
+<ol>
+<li>通过H5，内嵌到小程序中，调用小程序的拍照和拨打电话等。</li>
+</ol>
+</li>
+<li>
+<p>H5生成APP后</p>
+<ol>
+<li>打印( 1:蓝牙打印 | 2:Wi-Fi 打印)</li>
+<li>获取 app 用户信息、header信息（ third-appid、third-token、third-version）</li>
+<li>判断当前是否是APP环境等</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<h2 id="上家公司项目框架、约束、规范" tabindex="-1"><a class="header-anchor" href="#上家公司项目框架、约束、规范"><span>上家公司项目框架、约束、规范</span></a></h2>
+<p>https://shixindea.github.io/guoguo-notes/%E8%A2%81%E6%9E%9C%E9%94%85%E7%94%9F%E6%80%81/%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E5%8F%8A%E6%9E%B6%E6%9E%84/%E9%87%8D%E8%A6%81_%E6%A1%86%E6%9E%B6%20-%20%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE%E7%BA%A6%E6%9D%9F.html</p>
+<h2 id="可优化事项" tabindex="-1"><a class="header-anchor" href="#可优化事项"><span>可优化事项</span></a></h2>
+<p>小程序每次进入新页面，会清理 third-token、third-account等问题</p>
+<h2 id="项目建议" tabindex="-1"><a class="header-anchor" href="#项目建议"><span>项目建议</span></a></h2>
+<p>统一项目代码格式化，很重要！！！</p>
+<p>小程序打包区分路径，dev文件夹，build文件夹 等</p>
+<p>全局loading问题</p>
+<h2 id="未来待完成" tabindex="-1"><a class="header-anchor" href="#未来待完成"><span>未来待完成</span></a></h2>
+<ol>
+<li>根据公司技术栈封装初试框架   <code v-pre>袁果锅生态===&gt;项目框架及架构===&gt;新项目框架前后端约定</code></li>
+</ol>
+<h2 id="问题" tabindex="-1"><a class="header-anchor" href="#问题"><span>问题</span></a></h2>
+<p>不清楚公司未来发展路线，以及个人主要所在的项目，不能统一解决部分问题</p>
+<h2 id="已修改同步消息" tabindex="-1"><a class="header-anchor" href="#已修改同步消息"><span>已修改同步消息</span></a></h2>
+<h4 id="_1-小程序请求接口默认不抛出异常-响应拦截器-异常状态码封装" tabindex="-1"><a class="header-anchor" href="#_1-小程序请求接口默认不抛出异常-响应拦截器-异常状态码封装"><span>1. 小程序请求接口默认不抛出异常    -- 响应拦截器 异常状态码封装</span></a></h4>
+<p><strong>场景：</strong></p>
+<div class="language-tsx line-numbers-mode" data-highlighter="prismjs" data-ext="tsx" data-title="tsx"><pre v-pre class="language-tsx"><code><span class="line"><span class="token keyword">const</span> payKey <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">omoGetPayKeyByOmoCourseOrderId</span><span class="token punctuation">(</span></span>
+<span class="line">  router<span class="token punctuation">.</span>params<span class="token punctuation">.</span>omoCourseOrderId <span class="token operator">||</span> <span class="token string">''</span></span>
+<span class="line"><span class="token punctuation">)</span></span>
+<span class="line"><span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'payKey ===>'</span><span class="token punctuation">,</span> payKey<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">postAcceptTransferOrder</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span>
+<span class="line">  transferKey<span class="token operator">:</span> payKey <span class="token operator">||</span> <span class="token string">''</span></span>
+<span class="line"><span class="token punctuation">}</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>目前：</strong></p>
+<p>所有报错前端没有统一拦截，每次请求接口都要判断状态码 code</p>
+<p><strong>理论状态：</strong></p>
+<p>code=1 表示成功，所有提示走前端</p>
+<p>code=401 表示token过期或者未登录，前端监听出来弹框</p>
+<p>code为其他 表示失败，所有提示走后端</p>
+<div class="language-diff line-numbers-mode" data-highlighter="prismjs" data-ext="diff" data-title="diff"><pre v-pre class="language-diff"><code><span class="line">export function omoGetPayKeyByOmoCourseOrderId(omoCourseOrderId) {</span>
+<span class="line"><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line"> setShowApiErrorToast(true)</span>
+<span class="line"></span><span class="token prefix unchanged"> </span><span class="token line"> return request(</span>
+<span class="line"></span><span class="token prefix unchanged"> </span><span class="token line">   `/omo/course/order/message/${omoCourseOrderId}`,</span>
+<span class="line"></span><span class="token prefix unchanged"> </span><span class="token line">   {},</span>
+<span class="line"></span><span class="token prefix unchanged"> </span><span class="token line">   {</span>
+<span class="line"></span><span class="token prefix unchanged"> </span><span class="token line">     method: 'GET',</span>
+<span class="line"></span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">      throwingAnException: true   // 异常抛出</span>
+<span class="line"></span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">   }</span>
+<span class="line"></span><span class="token prefix unchanged"> </span><span class="token line"> )</span>
+<span class="line"></span></span>}</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

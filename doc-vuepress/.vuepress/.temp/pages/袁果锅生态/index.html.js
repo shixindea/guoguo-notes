@@ -1,16 +1,3 @@
 import comp from "/Users/guoguo/code/my-project/guoguo-notes/doc-vuepress/.vuepress/.temp/pages/袁果锅生态/index.html.vue"
 const data = JSON.parse("{\"path\":\"/%E8%A2%81%E6%9E%9C%E9%94%85%E7%94%9F%E6%80%81/\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":3,\"title\":\"vue架构\",\"slug\":\"vue架构\",\"link\":\"#vue架构\",\"children\":[]}],\"git\":{\"updatedTime\":1747276455000,\"contributors\":[{\"name\":\"yuanxinde\",\"email\":\"2914310412@qq.com\",\"commits\":1},{\"name\":\"袁果锅\",\"email\":\"2914310412@qq.com\",\"commits\":1}]},\"filePathRelative\":\"袁果锅生态/README.md\",\"excerpt\":\"<h3>vue架构</h3>\\n<div class=\\\"language-npm\\\" data-highlighter=\\\"prismjs\\\" data-ext=\\\"npm\\\" data-title=\\\"npm\\\"><pre class=\\\"language-npm\\\"><code><span class=\\\"line\\\">npm install dotenv cross-env --save-dev</span>\\n<span class=\\\"line\\\"></span></code></pre></div><p>可以读取不同的环境变量</p>\\n\"}")
 export { comp, data }
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}

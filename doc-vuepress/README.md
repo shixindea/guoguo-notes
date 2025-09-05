@@ -14,10 +14,11 @@
 ### 其他开源项目
 
 - [Vue3 组件库 Element ProMax](https://shixindea.github.io/element-promax-docs/en-US/)
-- [个人笔记 guoguo-notes](https://shixindea.github.io/guoguo-notes/)
 - [Git 提交规范 Guoguo-cz](https://www.npmjs.com/package/@shixinde/guoguo-cz)
-- [JavaScript 工具类 Guoguo-utils](https://shixindea.github.io/shixinde-utils/)
+- [JavaScript 工具类 Guoguo-utils](https://shixindea.github.io/shixinde-apifox-swagger/)
 - [vuepress 快速模板 Guoguo-vuepress](https://www.npmjs.com/package/@shixinde/vuepress-theme-init)
+- [个人笔记 guoguo-notes](https://www.npmjs.com/package/@shixinde/vuepress-theme-init)
+- [Apifox Swagger文档生成与TS类型解析工具 @shixinde/apifox-swagger](https://www.npmjs.com/package/@shixinde/apifox-swagger)
 
 ### 作者
 

@@ -79,3 +79,4 @@ jenv global 1.8
 13.如果要为项目指定JDK版本，只需在项目根目录下使用以下命令即可，jenv会在目录下生成.java-version文件来描述当前项目使用的JDK版本
 
 jenv local 1.8
+
